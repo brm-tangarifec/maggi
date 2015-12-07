@@ -39,7 +39,42 @@ function maggiTheme_preprocess_html(&$vars) {
 
 }
 // */
-
+/*Quitar css propio de drupal*/
+function maggiTheme_css_alter(&$css) {
+  $exclude = array(
+    'misc/vertical-tabs.css' => FALSE,
+    'modules/aggregator/aggregator.css' => FALSE,
+    'modules/block/block.css' => FALSE,
+    'modules/book/book.css' => FALSE,
+    'modules/comment/comment.css' => FALSE,
+    'modules/dblog/dblog.css' => FALSE,
+    'modules/file/file.css' => FALSE,
+    'modules/filter/filter.css' => FALSE,
+    'modules/forum/forum.css' => FALSE,
+    'modules/help/help.css' => FALSE,
+    'modules/node/node.css' => FALSE,
+    'modules/openid/openid.css' => FALSE,
+    'modules/poll/poll.css' => FALSE,
+    'modules/profile/profile.css' => FALSE,
+    'modules/search/search.css' => FALSE,
+    'modules/statistics/statistics.css' => FALSE,
+    'modules/syslog/syslog.css' => FALSE,
+    'modules/system/admin.css' => FALSE,
+    'modules/system/maintenance.css' => FALSE,
+    'modules/system/system.css' => FALSE,
+    'modules/system/system.admin.css' => FALSE,
+    'modules/system/system.base.css' => FALSE,
+    'modules/system/system.maintenance.css' => FALSE,
+    'modules/system/system.menus.css' => FALSE,
+    'modules/system/system.messages.css' => FALSE,
+    'modules/system/system.theme.css' => FALSE,
+    'modules/taxonomy/taxonomy.css' => FALSE,
+    'modules/tracker/tracker.css' => FALSE,
+    'modules/update/update.css' => FALSE,
+    'modules/user/user.css' => FALSE,
+  );
+  $css = array_diff_key($css, $exclude);
+}
 
 /**
  * Process variables for the html template.
@@ -56,11 +91,14 @@ function maggiTheme_process_html(&$vars) {
 /* -- Delete this line if you want to use these functions*/
 function maggiTheme_preprocess_page(&$vars) {
 	/*Incluir js en drupal*/
-	drupal_add_js(path_to_theme() . '/js/BRM_recolector.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_css(path_to_theme() . '/css/maggi.min.css',  array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+	drupal_add_js(path_to_theme() . '/js/libs.maggi.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	
 }
 function maggiTheme_process_page(&$vars) {
 }
 // */
+
 
 
 /**

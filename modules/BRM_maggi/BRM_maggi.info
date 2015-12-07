@@ -1,0 +1,5 @@
+name = BRM_Maggi
+description = Módulo creado para hacer un esqueleto base de los sitios de maggi
+core = 7.x
+version = "7.x-1.0"
+package = BRM_Maggi
