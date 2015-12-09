@@ -31,21 +31,6 @@ jQuery(document).ready(function(){
 	    
 	    });
 		
-		// $("h3").wrapAll('<div class="descripcion" />');
-
-	   //  $(".receta-dia h3").each(function(index, value) { 
-
-				// var htmldia=jQuery(this).html();
-
-				// // var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
-				// // jQuery(this).html(impHtmldia);
-
-				// $(this).html(htmldia).wrapAll('<div class="descripcion" />');
-	    
-	   //  });
-
-
-
 	};
 
 });
