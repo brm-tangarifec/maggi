@@ -1,5 +1,5 @@
 <?php
-var_dump($variables['nox']);
+//var_dump($variables['nox']);
 ?>
 <div class="cont-general">
 	<div class="cont-princ" title="<?php print_r($variables['nox'][0]->title) ?>" idVideo="<?php print_r($variables['nox'][0]->field_video_url['und'][0]['video_id']); ?>">
