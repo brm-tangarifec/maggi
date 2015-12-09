@@ -102,7 +102,13 @@
 <!--Vista recetas-->
 <div class="container-fluid recetas">
   <div class="row">
-     <!--Video Receta-->
+    <!-- !Main Content -->
+            <?php if ($content = render($page['content'])): ?>
+              <div id="content" class="region">
+                <?php print $content; ?>
+              </div>
+            <?php endif; ?>
+
   
   </div>
 </div>
