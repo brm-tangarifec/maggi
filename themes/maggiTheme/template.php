@@ -72,6 +72,9 @@ function maggiTheme_css_alter(&$css) {
     'modules/tracker/tracker.css' => FALSE,
     'modules/update/update.css' => FALSE,
     'modules/user/user.css' => FALSE,
+     // Remove contrib module CSS
+  drupal_get_path('module', 'views') . '/css/views.css' => FALSE,
+
   );
   $css = array_diff_key($css, $exclude);
 }

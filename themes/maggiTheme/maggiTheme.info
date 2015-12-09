@@ -78,6 +78,9 @@
   regions[sidebar_first]     = Sidebar first
   regions[sidebar_second]    = Sidebar second
   regions[content]           = Main Content
+  regions[recetas_home]           = Recetas Home
+  regions[productos]           = Productos
+  regions[temporada]           = temporada
   regions[highlighted]       = Highlighted
   regions[content_aside]     = Aside
   regions[secondary_content] = Secondary

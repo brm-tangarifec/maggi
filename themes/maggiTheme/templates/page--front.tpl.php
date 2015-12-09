@@ -99,12 +99,72 @@
 
 <!--F Header-->
 <!--Contenido-->
-<!--F Contenido-->
-
+<!--Vista recetas-->
+<div class="container-fluid recetas">
+	<div class="row">
+		 <!--Video Receta-->
+        <!--/-Video Receta-->
+	<?php
+	//var_dump($page);
+	 print render($page['recetas_home']);?>
+	
+	</div>
+</div>
+<!--Vista recetas-->
+<!--Productos-->
+<!--Productos-->
+  <div class="row productos">
+    <h2 class="titular-bg">
+      <span class="icon icon-productos"></span> Productos
+      
+    </h2>
+    <?php
+	//var_dump($page);
+	 print render($page['productos']);
+	 ?>
+  </div>
+<!--Productos-->
+ <!--Temporadas-->
+  <div class="row temporadas">
+    <h2 class="titular-bg">
+      <span class="icon icon-temporada"></span> Temporadas
+      
+    </h2>
+    <?php
+	//var_dump($page);
+	 print render($page['temporada']);
+	 ?>
+  </div>
+  <!--/-Temporadas-->
+	<!--F Contenido-->
   <!-- !Footer -->
    <?php
    $block = module_invoke('BRM_Maggi', 'block_view', 'footer');
     print render($block['content']);
   ?>
 </div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('.block-content').removeClass('content');
+	if(jQuery('.productoSazon').length>0){
+
+		$('.productoSazon').each(function(index, value) { 
+			var html=jQuery(this).html();
+			var impHtml='<div class="content">'+html+'</div>';
+			jQuery(this).html(impHtml);
+    	});
+
+
+		
+
+		///jQuery('.productoSazon').wrapAll('<div class="content" />');
+	}
+	$('.receta-dia').each(function(index, value) { 
+			var html=jQuery(this).html();
+			var impHtml='<div class="content">'+html+'</div>';
+			jQuery(this).html(impHtml);
+    	});
+})
+</script>
   
