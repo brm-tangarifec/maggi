@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
 
 	// ejecutamos solo en el home
 
-	if ( url == "/" ){		
+	//if ( url == "/" ){		
 		jQuery('.block-content').removeClass('content');
 		if(jQuery('.productoSazon').length>0){
 
@@ -30,7 +30,28 @@ jQuery(document).ready(function(){
 				$(this).find("h3").wrapAll('<div class="descripcion" />');
 	    
 	    });
-		
-	};
+
+		//Funcion para mostrar/ocultar cajas filtros
+
+		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
+
+		$(document).on("change", ".form-select", function () {
+
+			var dominio= window.location.protocol+'//'+window.location.hostname;
+
+			// $("#block-views-recetario-1er-tiempo-block-9").append('<div class="loader"><img src="'+dominio+'/consumidor_nestle_com_co/sites/all/themes/casabienestar/images/icono-recetario.svg" width="60" class="img-responsive"><p>Estamos preparando las recetas</p></div>');
+				$(".view-recetario-1er-tiempo").addClass('hidden');
+
+				 $(".valid option", this).addClass("hidden");
+
+			window.setTimeout(function () {
+				$(".view-id-recetario .view-content").addClass('show');
+				$("#edit-reset").addClass('btn btn-primary');
+				 $("option", this).removeClass("hidden");
+
+			// console.log("oli");
+			},10000);
+			
+		});
 
 });
