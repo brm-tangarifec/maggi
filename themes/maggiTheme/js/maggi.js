@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
 				// var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
 				// jQuery(this).html(impHtmldia);
 
-				$(this).html(htmldia).wrap('<div class="descripcion" />')
+				$(this).html(htmldia).wrapAll('<div class="descripcion" />');
 	    
 	    });
 
