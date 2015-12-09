@@ -27,21 +27,22 @@ jQuery(document).ready(function(){
 				var html=jQuery(this).html();
 				var impHtml='<div class="content">'+html+'</div>';
 				jQuery(this).html(impHtml);
+				$(this).find("h3").wrapAll('<div class="descripcion" />');
 	    
 	    });
 		
 		// $("h3").wrapAll('<div class="descripcion" />');
 
-	    $(".receta-dia h3").each(function(index, value) { 
+	   //  $(".receta-dia h3").each(function(index, value) { 
 
-				var htmldia=jQuery(this).html();
+				// var htmldia=jQuery(this).html();
 
-				// var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
-				// jQuery(this).html(impHtmldia);
+				// // var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
+				// // jQuery(this).html(impHtmldia);
 
-				$(this).html(htmldia).wrapAll('<div class="descripcion" />');
+				// $(this).html(htmldia).wrapAll('<div class="descripcion" />');
 	    
-	    });
+	   //  });
 
 
 
