@@ -38,6 +38,10 @@ function BRM_maggi_block_info() {
          'info' => t("tema base del footer del sitio"),
          'cache' => DRUPAL_CACHE_CUSTOM,
       );
+      $blocks['block_label_recetario'] = array(
+         'info' => t("block static - Recetario"),
+         'cache' => DRUPAL_CACHE_CUSTOM,
+      );
     return $blocks;
 }
 
@@ -57,7 +61,11 @@ function BRM_maggi_block_view($delta = '') {
     case 'footer':
       $block['content'] = theme('footer',$variables);
       return $block;
-    break;   
+    break;
+    case 'block_label_recetario':
+      $block['content'] = theme('block_label_recetario',$variables);
+      return $block;
+    break;  
   }
 }
 
@@ -70,6 +78,9 @@ function BRM_maggi_theme() {
      	'footer' => array(
        	'template' => 'theme/footer'
      	),
+      'block_label_recetario' => array(
+        'template' => 'theme/block_label_recetario'
+      ),
      );
 }
 
