@@ -103,7 +103,7 @@
 <div class="container-fluid recetas">
 	<div class="row">
     <h2 class="titular-bg">
-      <span class="icon icon-recetas"></span> Recetas para todos los días
+      <span class="icon icon-productos"></span> Productos
       
     </h2>
 		 <!--Video Receta-->
