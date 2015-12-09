@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 				jQuery(this).html(impHtml);
 	    	});
 
-		$(".dia").wrap('<div class="descripcion"></div>');
+		$(".dia").wrapAll('<div class="descripcion"></div>');
 
 	};
 
