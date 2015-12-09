@@ -37,10 +37,7 @@ jQuery(document).ready(function(){
 				// var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
 				// jQuery(this).html(impHtmldia);
 
-				var recetaDia = $(this).html(htmldia).wrap('<div data-receta="receta-home" />');
-
-				$(recetaDia).wrap('<div class="descripcion" />');
-
+				$(this).html(htmldia).wrap('<div class="descripcion" />')
 	    
 	    });
 
