@@ -95,7 +95,11 @@ function maggiTheme_process_html(&$vars) {
 function maggiTheme_preprocess_page(&$vars) {
 	/*Incluir js en drupal*/
 	drupal_add_css(path_to_theme() . '/css/maggi.min.css',  array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-	drupal_add_js(path_to_theme() . '/js/libs.maggi.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+  drupal_add_js(path_to_theme() . '/js/libs.maggi.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+	drupal_add_js(path_to_theme() . '/js/maggi.js',  array( 'scope' => 'header', 'weight' => -20 , 'group' => JS_LIBRARY, 'preprocess' => FALSE));
+  if (!empty($vars['node']) && !empty($vars['node']->type)) {
+    $vars['theme_hook_suggestions'][] = 'page__node__' . $vars['node']->type;
+  }
 	
 }
 function maggiTheme_process_page(&$vars) {
