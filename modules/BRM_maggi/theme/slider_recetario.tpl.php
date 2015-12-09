@@ -1,1 +1,3 @@
-Slider recetario
+<?php
+var_dump($variables);
+?>

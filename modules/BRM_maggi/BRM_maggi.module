@@ -71,6 +71,7 @@ function BRM_maggi_block_view($delta = '') {
       return $block;
     break;  
     case 'slider_recetario':
+      $variables['nox'] = get_nodes_nodequeue(1);
       $block['content'] = theme('slider_recetario',$variables);
       return $block;
     break;  
@@ -127,4 +128,21 @@ function limpiarMiga($nombreVariable){
   );
   $nombreVariable = strtr($nombreVariable, $limpieza);
   return $nombreVariable;
+}
+
+function get_nodes_nodequeue($idNodeque){
+
+  $result = db_query("select * FROM nodequeue_nodes WHERE qid = :fx ORDER BY position ASC;",
+            array(':fx' => $idNodeque));
+  while ($record = $result->fetchAssoc()){
+    $arraynodos[] = $record;
+  };
+
+  foreach ($arraynodos as $key => $value) {
+    $nodoso = node_load($value["nid"]);
+    $nodos[] = $nodoso;
+  }
+  //$nodos['tax'] = $arraynodos[0];
+  return $nodos;
+
 }
