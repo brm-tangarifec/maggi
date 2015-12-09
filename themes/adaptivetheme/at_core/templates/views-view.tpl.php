@@ -51,7 +51,7 @@
       <?php print $attachment_before; ?>
     </div>
   <?php endif; ?>
-
+  <div class="clearfix"></div>
   <?php if ($rows): ?>
     <div class="view-content">
       <?php print $rows; ?>
