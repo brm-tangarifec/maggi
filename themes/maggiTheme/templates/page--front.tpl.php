@@ -144,27 +144,4 @@
   ?>
 </div>
 
-<script type="text/javascript">
-jQuery(document).ready(function(){
-	jQuery('.block-content').removeClass('content');
-	if(jQuery('.productoSazon').length>0){
-
-		$('.productoSazon').each(function(index, value) { 
-			var html=jQuery(this).html();
-			var impHtml='<div class="content">'+html+'</div>';
-			jQuery(this).html(impHtml);
-    	});
-
-
-		
-
-		///jQuery('.productoSazon').wrapAll('<div class="content" />');
-	}
-	$('.receta-dia').each(function(index, value) { 
-			var html=jQuery(this).html();
-			var impHtml='<div class="content">'+html+'</div>';
-			jQuery(this).html(impHtml);
-    	});
-})
-</script>
   

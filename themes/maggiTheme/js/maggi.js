@@ -1,62 +1,36 @@
 
-//Funciones y animaciones del sitio web
-$(document).on("ready", function () {
-	//Sticky menu
-	 $("#menu").affix({
-			offset: { 
-					top: 100 
-		}
-	});
+var url = window.location.pathname;
 
-	//Animacion de entrada para fijar menu
 
-	$("#menu").on('affixed.bs.affix', function () {
+// Funciones y animaciones del sitio web
+jQuery(document).ready(function(){
+
+
+	// ejecutamos solo en el home
+
+	if ( url == "/" ){		
+		jQuery('.block-content').removeClass('content');
+		if(jQuery('.productoSazon').length>0){
+
+			$('.productoSazon').each(function(index, value) { 
+				var html=jQuery(this).html();
+				var impHtml='<div class="content">'+html+'</div>';
+				jQuery(this).html(impHtml);
+	    	});
+
+
 			
-			$(this).addClass('animated fadeInDown');
 
+			///jQuery('.productoSazon').wrapAll('<div class="content" />');
+		}
+		$('.receta-dia').each(function(index, value) { 
+				var html=jQuery(this).html();
+				var impHtml='<div class="content">'+html+'</div>';
+				jQuery(this).html(impHtml);
+	    	});
 
-	});
+		$(".dia").wrap('<div class="descripcion"></div>');
 
-	//removemos animacion 
-	$("#menu").on("affixed-top.bs.affix", function () {
-			$(this).removeClass('animated fadeInDown');
-	});
-
-	//slide de login
-	// Abrimos el panel de login
-	$(".btn-login").on("click", function () {
-
-		$(".login").addClass('animated slideInDown').slideDown();
-		// $(".login").slideDown();
-		
-	});
-
-	//Cerramos el panel de login
-
-	$(".cerrar-login").on("click", function () {
-		 $(".login").removeClass('animated slideInDown').slideUp();
-	});
-
-		//Fuciones de scroll
-		$(window).scroll(function() {
-
-		//Ocultamos boton volver arriba
-		 if (  $(window).scrollTop() >= 980 ) {
-
-		 	$(".up").removeClass('animated fadeInUp');
-		 }
-
-
-		//Mostramos boton volver arriba
-		 if ( $(window).scrollTop() > 1500 && !$(".up").hasClass('animated')  ) {
-
-		 		$(".up").addClass('animated fadeInUp');		
-
-
-		 }
-
-		});
+	};
 
 });
-
-
