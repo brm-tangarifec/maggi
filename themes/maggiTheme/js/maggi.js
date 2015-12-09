@@ -32,7 +32,7 @@ jQuery(document).ready(function(){
 		
 		// $("h3").wrapAll('<div class="descripcion" />');
 
-	    $(".receta-dia > h3").each(function(index, value) { 
+	    $(".receta-dia h3").each(function(index, value) { 
 
 				var htmldia=jQuery(this).html();
 
