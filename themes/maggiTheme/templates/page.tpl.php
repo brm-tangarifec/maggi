@@ -99,6 +99,11 @@
 
 <!--F Header-->
 <!--Contenido-->
+<div class="container-fluid">
+  <?php if ($page['leaderboard']) : ?>           
+    <?php print render($page['leaderboard']); ?>           
+  <?php endif; ?> 
+</div>
 <!--Vista recetas-->
 <div class="container-fluid recetas">
   <div class="row">
