@@ -6,6 +6,7 @@
 		<?php
 			print_r($variables['nox'][0]->field_video_url['und'][0]['video_id']);
 		?>
+		<iframe width="420" height="315" src="https://www.youtube.com/embed/<?php print_r($variables['nox'][0]->field_video_url['und'][0]['video_id']); ?>?rel=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="cont-secun">
 		<?php
