@@ -9,7 +9,7 @@
 			$aux = 0;
 			foreach ($variables['nox'] as $value) {
 				if($aux>0){ ?>
-					<div class="cont-secun-item">
+					<div class="cont-secun-item row">
 						<img width="240px" height="180" src="http://img.youtube.com/vi/<?php print_r($value->field_video_url['und'][0]['video_id']); ?>/0.jpg"/>
 						<h3><?php print_r($value->title); ?></h3>
 					</div>
