@@ -104,5 +104,105 @@
  * later using the render() function. Install the Devel module and use
  * <?php dsm($content); ?> to find variable names to hide() or render().
  */
-var_dump($page);
+var_dump($$content);
+hide($content['comments']);
+hide($content['links']);
 ?>
+
+<!--Imagen Receta/video-->
+<section class="container-fluid u-no-border imagen-big"><?php print render($content['field_receta_imagen_grande']);?></section>
+<!--/-Imagen Receta/video-->
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<!--Contenido-->
+<!--Contenido-->
+<section class="container-fluid receta-contenido">
+  <article class="row u-bg-blanco">
+    <h1><?php print render($title);?></h1>
+    <!--Estrellas y Compartir-->
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+      <div class="estrellas"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+      <p class="extra-tools">
+        <span class="icon icon-share"></span>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+      </p>
+    </div>
+    <!--/-Estrellas y Compartir-->
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+      <div class="datos">
+        <div class="box box-nivel"><?php print render($content['field_receta_dificultad']);?></div>
+        <div class="box box-tiempo">
+          <div class="textos">
+            
+            <p class="numero"><?php
+            print render($content['field_receta_tiempo']);
+            ?>
+            </p>
+            <p class="help">Minutos</p>
+          </div>
+        </div>
+        <div class="box box-porciones">
+          <div class="textos">
+            <p class="numero"><?php
+            print render($content['field_receta_porciones']);
+            ?>
+            </p>
+            <p class="help">Porciones</p>
+          </div>
+        </div>
+        <div class="box box-calorias">
+          <div class="textos">
+            <p class="numero">9999</p>
+            <p class="help">Calorías</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Ingredientes-->
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ingredientes">
+      <h3>Ingredientes</h3>
+      <ul class="listado">
+        <li><span>1lb</span> de Pasta La Muñeca cocinada al dente.</li>
+        <li><span>2</span> cucharadas de aceite Premier.</li>
+        <li><span>1lb</span> de carne molida.</li>
+        <li><span>1</span> sobre de Delicias para hoy Salsa Bolognesa MAGGI®.</li>
+        <li>
+          <span>1</span> taza de agua de la cocción de la pasta.
+          
+          
+        </li>
+      </ul><img src="images/producto-sample.png" alt=""><a role="button" class="enviar">Enviar lista por correo</a>
+    </div>
+    <!--/-Ingredientes-->
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 preparacion">
+      <!--Preparación-->
+      <h3>Preparación</h3>
+      <ol class="pasos">
+        <li>En una sartén con el Aceite Premier caliente, sofreír la carne hasta que dore; agregar el agua de cocción de la Pasta La Muñeca y el contenido del sobre de Delicias para hoy Salsa Bolognesa MAGGI®. Mezclar hasta integrar bien y dejar hervir.</li>
+        <li>Cocinar a fuego medio semitapado hasta integrar bien los sabores.</li>
+        <li>Pasado el tiempo, agregar la Pasta La Muñeca cocinada y dejar por 1 minuto.</li>
+        <li>Acompañar con rodajas de pan al gusto.</li>
+        <li>Servir enseguida.</li>
+      </ol>
+      <!--/-Preparación-->
+      <!--Comentarios-->
+      <div class="box-comentarios">
+        <p>0 Comentarios</p>
+        <form class="comentarios">
+          <textarea></textarea>
+          <input type="submit" value="Enviar" class="btn enviar">
+        </form>
+      </div>
+      <!--/-Comentarios     -->
+    </div>
+  </article>
+</section>
+<!--/-Contenido
+<!--F Contenido-->
+   <?php if ($links = render($content['links'])): ?>
+    <nav<?php print $links_attributes; ?>><?php print $links; ?></nav>
+  <?php endif; ?>
+
+  <?php print render($content['comments']); ?>
+
+  <?php print render($title_suffix); ?>
+</article>

@@ -100,42 +100,7 @@
 <!--F Header-->
 <!--Contenido-->
 <!--Vista recetas-->
-<div class="container-fluid recetas">
-  <div class="row">
-     <!--Video Receta-->
-        <!--/-Video Receta-->
-  <?php
-  //var_dump($page);
-   print render($page['recetas_home']);?>
-  
-  </div>
-</div>
-<!--Vista recetas-->
-<!--Productos-->
-<!--Productos-->
-  <div class="row productos">
-    <h2 class="titular-bg">
-      <span class="icon icon-productos"></span> Productos
-      
-    </h2>
-    <?php
-  //var_dump($page);
-   print render($page['productos']);
-   ?>
-  </div>
-<!--Productos-->
- <!--Temporadas-->
-  <div class="row temporadas">
-    <h2 class="titular-bg">
-      <span class="icon icon-temporada"></span> Temporadas
-      
-    </h2>
-    <?php
-  //var_dump($page);
-   print render($page['temporada']);
-   ?>
-  </div>
-  <!--/-Temporadas-->
+<?php print render($page['content']); ?>
   <!--F Contenido-->
   <!-- !Footer -->
    <?php

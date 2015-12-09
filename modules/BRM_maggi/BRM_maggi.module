@@ -132,7 +132,7 @@ function limpiarMiga($nombreVariable){
 
 function get_nodes_nodequeue($idNodeque){
 
-  $result = db_query("select * FROM nodequeue_nodes WHERE qid = :fx ORDER BY position ASC;",
+  $result = db_query("select * FROM mgg_nodequeue_nodes WHERE qid = :fx ORDER BY position ASC;",
             array(':fx' => $idNodeque));
   while ($record = $result->fetchAssoc()){
     $arraynodos[] = $record;
