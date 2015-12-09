@@ -13,7 +13,7 @@
 			foreach ($variables['nox'] as $value) {
 				if($aux>0){ ?>
 					<div class="cont-secun-item">
-						<img src="http://img.youtube.com/vi/"<?php print_r($value->field_video_url['und'][0]['video_id']); ?>"/0.jpg"/>
+						<img src="http://img.youtube.com/vi/<?php print_r($value->field_video_url['und'][0]['video_id']); ?>/0.jpg"/>
 					</div>
 				<?php }
 				$aux++;
