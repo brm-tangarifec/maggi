@@ -30,7 +30,7 @@ jQuery(document).ready(function(){
 	    
 	    });
 
-	    $(".dia").each(function(index, value) { 
+	    $(".dia-semana, .dia-receta ").each(function(index, value) { 
 
 				var htmldia=jQuery(this).html();
 
