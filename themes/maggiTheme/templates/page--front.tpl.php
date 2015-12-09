@@ -102,6 +102,10 @@
 <!--Vista recetas-->
 <div class="container-fluid recetas">
 	<div class="row">
+    <h2 class="titular-bg">
+      <span class="icon icon-recetas"></span> Recetas para todos los días
+      
+    </h2>
 		 <!--Video Receta-->
         <!--/-Video Receta-->
 	<?php
