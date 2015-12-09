@@ -28,7 +28,6 @@
  */
 ?>
 <div class="<?php print $classes; ?>">
-  SOY EL TPL DE LA VISTA
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
