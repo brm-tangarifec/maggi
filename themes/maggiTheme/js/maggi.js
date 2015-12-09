@@ -27,8 +27,6 @@ jQuery(document).ready(function(){
 				var html=jQuery(this).html();
 				var impHtml='<div class="content">'+html+'</div>';
 				jQuery(this).html(impHtml);
-
-				$(".dia").wrapAll('<div class="descripcion"></div>');
 	    
 	    });
 
