@@ -32,6 +32,13 @@ jQuery(document).ready(function(){
 	    
 	    });
 
+	    $(".dia").each(function(index, value) { 
+				var htmldia=jQuery(this).html();
+				var impHtmldia='<div class="descripcion">'+htmldia+'</div>';
+				jQuery(this).html(impHtmldia);
+	    
+	    });
+
 
 	};
 
