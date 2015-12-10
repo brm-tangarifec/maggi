@@ -6,6 +6,21 @@ var url = window.location.pathname,
 // Funciones y animaciones del sitio web
 jQuery(document).ready(function(){
 
+	//slide de login
+	// Abrimos el panel de login
+	$(".btn-login").on("click", function () {
+
+		$(".login").addClass('animated slideInDown').slideDown();
+		// $(".login").slideDown();
+		
+	});
+
+	//Cerramos el panel de login
+
+	$(".cerrar-login").on("click", function () {
+		 $(".login").removeClass('animated slideInDown').slideUp();
+	});
+
 
 	// ejecutamos solo en el home
 
