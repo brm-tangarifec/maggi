@@ -1,7 +1,7 @@
 
-var url = window.location.pathname;
-	screenWidth = $(window).width();
-	var dominio= window.location.protocol+'//'+window.location.hostname;
+var url = window.location.pathname,
+	screenWidth = $(window).width(),
+	dominio= window.location.protocol+'//'+window.location.hostname;
 
 
 /*Funciones y animaciones del sitio web*/
