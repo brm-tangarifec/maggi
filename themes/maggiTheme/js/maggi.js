@@ -44,6 +44,7 @@ jQuery(document).ready(function(){
 
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
+		console.log(url);
 		$(".view-recetario-2do-tiempo .view-content").addClass('hidden');
 		$(document).on("change", ".form-select", function () {
 
