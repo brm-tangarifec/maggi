@@ -1,6 +1,6 @@
 
-var url = window.location.pathname,
-	screenWidth = $(window).width(),
+var url = window.location.pathname;
+	screenWidth = $(window).width();
 	var dominio= window.location.protocol+'//'+window.location.hostname;
 
 

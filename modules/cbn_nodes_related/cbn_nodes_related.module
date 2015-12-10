@@ -1,0 +1,70 @@
+<?php
+function cbn_nodes_related_block_info() {
+  $blocks = array();
+  $blocks['cbn_module_nodes_related'] = array(
+    'info' => t("CBN Module: Block para contenidos relacionados"),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  return $blocks;
+}
+
+function cbn_nodes_related_block_view($delta = '') {
+    $block = array();
+    $variables = array();
+    switch ($delta) {
+  case 'cbn_module_nodes_related':
+        $nodeId=currentnode()->nid;
+        echo $nodeId;
+        $buscaEsto=search_nodes_related($nodeId);
+        $cargaNodos= node_load_multiple($buscaEsto);
+        var_dump($cargaNodos);
+
+    break;
+              }
+   return $block;
+}
+
+function cbn_nodes_related_theme(){
+    return array(
+      'theme_nodes_related' => array(
+        'template' => 'theme/theme_nodes_related'
+      ),
+    );
+}
+
+function currentnode_nid(){
+    if (arg(0)=='node' && is_numeric(arg(1)))
+        return arg(1);
+    else 
+        return 0;
+}
+
+function currentnode(){
+    return node_load(currentnode_nid());
+}
+
+function search_nodes_related($taxo){
+  //Nueva
+  $result = db_query("select entity_id FROM mgg_field_data_field_receta_producto_peque WHERE field_receta_producto_peque_target_id = :fx  order by RAND()  limit 3", array(':fx' => $taxo));
+
+    while ($record = $result->fetchAssoc()){
+      $arraynodos[] = $record;
+    };
+
+    foreach ($arraynodos as $key => $value) {
+      if(isset($value["nid"])){
+        $nodoso = node_load($value["nid"]);
+        $nodos[] = $nodoso;
+      }
+    }
+    $nodos['tax'] = $arraynodos;
+    return $nodos;
+}
+
+function carga_nodos_recomendados($buscaEsto) {
+  var_dump($buscaEsto);
+  echo 'Hola';
+  $cargaVainas= node_load($buscaEsto);
+  //return entity_load('node', $nids, $reset);
+  return $cargaVainas;
+}
