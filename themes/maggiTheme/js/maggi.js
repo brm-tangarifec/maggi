@@ -1,5 +1,6 @@
 
-var url = window.location.pathname;
+var url = window.location.pathname,
+	screenWidth = $(window).width();
 
 
 // Funciones y animaciones del sitio web
@@ -53,5 +54,23 @@ jQuery(document).ready(function(){
 			},10000);
 			
 		});
+
+
+	//Click acordeon recetas
+	if ( screenWidth <= 770 ) {
+
+		var receta = $(".receta-dia");
+
+		$(".receta-dia").on('click', function() {
+
+			$(document).find(receta).removeClass("receta-activa");
+
+			$(this).addClass("receta-activa");
+
+
+		});
+
+
+	};
 
 });
