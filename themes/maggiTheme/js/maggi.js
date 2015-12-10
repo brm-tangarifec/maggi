@@ -3,11 +3,11 @@ var url = window.location.pathname,
 	screenWidth = $(window).width();
 
 
-// Funciones y animaciones del sitio web
+/*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
-	//slide de login
-	// Abrimos el panel de login
+	/*slide de login
+	 Abrimos el panel de login*/
 	$(".btn-login").on("click", function () {
 
 		$(".login").addClass('animated slideInDown').slideDown();
@@ -15,16 +15,15 @@ jQuery(document).ready(function(){
 		
 	});
 
-	//Cerramos el panel de login
+	/*Cerramos el panel de login*/
 
 	$(".cerrar-login").on("click", function () {
 		 $(".login").removeClass('animated slideInDown').slideUp();
 	});
 
 
-	// ejecutamos solo en el home
 
-	//if ( url == "/" ){		
+
 		jQuery('.block-content').removeClass('content');
 		if(jQuery('.productoSazon').length>0){
 
@@ -33,11 +32,6 @@ jQuery(document).ready(function(){
 				var impHtml='<div class="content">'+html+'</div>';
 				jQuery(this).html(impHtml);
 	    	});
-
-
-			
-
-			///jQuery('.productoSazon').wrapAll('<div class="content" />');
 		}
 		$('.receta-dia').each(function(index, value) { 
 				var html=jQuery(this).html();
@@ -47,7 +41,6 @@ jQuery(document).ready(function(){
 	    
 	    });
 
-		//Funcion para mostrar/ocultar cajas filtros
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
 		console.log(url);
