@@ -95,8 +95,8 @@ jQuery(document).ready(function(){
 
 	/* BXSLIDER */
   		$('.bxslider').bxSlider(
-  			minSlides: 4,
-  			maxSlides: 4,
+  			minSlides: 3,
+  			maxSlides: 3,
   		);
 
 });
