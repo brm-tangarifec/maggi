@@ -4,7 +4,7 @@
 		  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php print_r($variables['nox'][0]->field_video_url['und'][0]['video_id']); ?>?rel=0&autoplay=0"></iframe>
 		</div>
 	</div>
-	<div class="cont-secun">
+	<div class="cont-secun bxslider">
 		<?php
 			$aux = 0;
 			foreach ($variables['nox'] as $value) {
