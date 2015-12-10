@@ -93,4 +93,9 @@ jQuery(document).ready(function(){
 		$('h3', this).text(titlePrin);
 	});
 
+	/* BXSLIDER */
+	$(document).ready(function(){
+  		$('.bxslider').bxSlider();
+	});
+
 });
