@@ -46,7 +46,6 @@ jQuery(document).ready(function(){
 
 			window.setTimeout(function () {
 				$(".view-recetario-2do-tiempo .view-content").removeClass("hidden");
-				$(".view-recetario-2do-tiempo .view-content").addClass('show');
 				$("#edit-reset").addClass('btn btn-primary');
 				 $("option", this).removeClass("hidden");
 
