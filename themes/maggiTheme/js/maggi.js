@@ -107,13 +107,13 @@ jQuery(document).ready(function(){
 
 			contenedor.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'+
 				sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
-				+dominio+'sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+dominio+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
 				+bases+'" class="producto-categoria">Bases</a><img src="'
-				+dominio+'sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+dominio+'/sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
 				+caldos+'" class="producto-categoria"></a><img src="'
-				+dominio+'sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+dominio+'/sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
 				+sazonadores+'" class="producto-categoria"></a><img src="'
-				+dominio+'sites/all/themes/maggiTheme/files/images/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
+				+dominio+'/sites/all/themes/maggiTheme/files/images/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
 
 	};
