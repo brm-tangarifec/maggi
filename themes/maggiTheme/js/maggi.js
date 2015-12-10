@@ -82,6 +82,7 @@ jQuery(document).ready(function(){
 		var titlePrin = $('.block-brm-maggi .cont-princ').attr('title');
 		var idvideosecun = $(this).attr('idvideosecun');
 		var titleSecun = $(this).attr('title');
+
 		$('.block-brm-maggi .cont-princ').attr("title",titleSecun);
 		$('.block-brm-maggi .cont-princ').attr("idvideo",idvideosecun);
 		$('.block-brm-maggi .cont-princ .embed-responsive iframe').attr("src", "https://www.youtube.com/embed/"+idvideosecun+"?rel=0&autoplay=0");
@@ -89,6 +90,7 @@ jQuery(document).ready(function(){
 		$(this).attr("title",titlePrin);
 		$(this).attr("idvideosecun",idvideoPrin);
 		$('img', this).attr("src", "http://img.youtube.com/vi/"+idvideoPrin+"/0.jpg");
+		$('h3', this).text(titlePrin);
 	});
 
 });
