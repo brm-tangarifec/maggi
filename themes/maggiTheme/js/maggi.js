@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
 		//Funcion para mostrar/ocultar cajas filtros
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
-
+		$(".view-recetario-2do-tiempo .view-content").addClass('hidden');
 		$(document).on("change", ".form-select", function () {
 
 			var dominio= window.location.protocol+'//'+window.location.hostname;
