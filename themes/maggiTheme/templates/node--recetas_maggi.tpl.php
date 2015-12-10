@@ -104,13 +104,18 @@
  * later using the render() function. Install the Devel module and use
  * <?php dsm($content); ?> to find variable names to hide() or render().
  */
-var_dump($$content);
+
 hide($content['comments']);
 hide($content['links']);
 ?>
 
 <!--Imagen Receta/video-->
-<section class="container-fluid u-no-border imagen-big"><?php print render($content['field_receta_imagen_grande']);?></section>
+<?php if ($content['field_video_url']): ?>
+    <section class="container-fluid u-no-border imagen-big"><?php print render($content['field_video_url']);?></section>
+<?php else: ?>
+  <section class="container-fluid u-no-border imagen-big"><?php print render($content['field_receta_imagen_grande']);?></section>
+<?php endif; ?>
+
 <!--/-Imagen Receta/video-->
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <!--Contenido-->
@@ -133,11 +138,9 @@ hide($content['links']);
         <div class="box box-tiempo">
           <div class="textos">
             
-            <p class="numero"><?php
-            print render($content['field_receta_tiempo']);
-            ?>
+            <p class="numero"><?php print render($content['field_receta_tiempo']);?>
             </p>
-            <p class="help">Minutos</p>
+            <p class="help"><?php print render($content['field_receta_tiempo_lista']);?> </p>
           </div>
         </div>
         <div class="box box-porciones">
@@ -151,7 +154,7 @@ hide($content['links']);
         </div>
         <div class="box box-calorias">
           <div class="textos">
-            <p class="numero">9999</p>
+            <p class="numero"><?php print render($content['field_receta_calorias'])?></p>
             <p class="help">Calorías</p>
           </div>
         </div>
@@ -160,29 +163,14 @@ hide($content['links']);
     <!--Ingredientes-->
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ingredientes">
       <h3>Ingredientes</h3>
-      <ul class="listado">
-        <li><span>1lb</span> de Pasta La Muñeca cocinada al dente.</li>
-        <li><span>2</span> cucharadas de aceite Premier.</li>
-        <li><span>1lb</span> de carne molida.</li>
-        <li><span>1</span> sobre de Delicias para hoy Salsa Bolognesa MAGGI®.</li>
-        <li>
-          <span>1</span> taza de agua de la cocción de la pasta.
-          
-          
-        </li>
-      </ul><img src="images/producto-sample.png" alt=""><a role="button" class="enviar">Enviar lista por correo</a>
+      <?php print render($content['field_receta_ingredientes']);?>
+      <?php print render($content["field_receta_producto_peque"])?><a role="button" class="enviar">Enviar lista por correo</a>
     </div>
     <!--/-Ingredientes-->
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 preparacion">
       <!--Preparación-->
       <h3>Preparación</h3>
-      <ol class="pasos">
-        <li>En una sartén con el Aceite Premier caliente, sofreír la carne hasta que dore; agregar el agua de cocción de la Pasta La Muñeca y el contenido del sobre de Delicias para hoy Salsa Bolognesa MAGGI®. Mezclar hasta integrar bien y dejar hervir.</li>
-        <li>Cocinar a fuego medio semitapado hasta integrar bien los sabores.</li>
-        <li>Pasado el tiempo, agregar la Pasta La Muñeca cocinada y dejar por 1 minuto.</li>
-        <li>Acompañar con rodajas de pan al gusto.</li>
-        <li>Servir enseguida.</li>
-      </ol>
+      <?php print render($content['body'])?>
       <!--/-Preparación-->
       <!--Comentarios-->
       <div class="box-comentarios">
