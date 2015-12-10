@@ -57,13 +57,16 @@ jQuery(document).ready(function(){
 
 			// $("#block-views-recetario-1er-tiempo-block-9").append('<div class="loader"><img src="'+dominio+'/consumidor_nestle_com_co/sites/all/themes/casabienestar/images/icono-recetario.svg" width="60" class="img-responsive"><p>Estamos preparando las recetas</p></div>');
 				$("#content .clajsdes").addClass('hidden');
-				$(".valid option", this).addClass("hidden");
+				 $(".valid option", this).addClass("hidden");
+				 
+			window.setTimeout(function () {
 				$(".view-recetario-2do-tiempo .view-content").removeClass("hidden");
 				$("#edit-reset").addClass('btn btn-primary');
-
-
+				 $("option", this).removeClass("hidden");
+				 $(".view-filters form").submit();
 			// console.log("oli");
-			$(".view-filters form").submit(); 
+			},10000);
+			
 		});
 
 
