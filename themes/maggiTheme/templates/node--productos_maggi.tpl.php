@@ -154,76 +154,7 @@ hide($content['links']);
     </div>
   </article>
 </section>
-<section class="container-fluid recetas recetas-relacionadas">
-  <article class="row">
-    <h2 class="titular-bg">
-      <span class="icon icon-recetas"></span> Recetas con Base para Salsa Bechamel MAGGI®
-      
-    </h2>
-    <!--Receta martes-->
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 receta-dia">
-      <div class="content">
-        <figure class="img-receta"><a href="#" class="descripcion">
-            <h3>Lunes</h3>
-            <p>Sancocho de Gallina  </p></a><a href="#"><img src="images/sample-recipe.jpg" alt="Sancocho de Gallina"></a></figure>
-        <p class="extra-tools">
-          <span class="icon icon-share"></span>
-          <span class="icon icon-timer"></span> <span class="time"> 30 mins.</span>
-          <div class="estrellas">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-          
-          </div>
-        </p>
-      </div>
-    </div>
-    <!--Receta martes-->
-    <!--Receta Miércoles-->
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 receta-dia">
-      <div class="content">
-        <figure class="img-receta"><a href="#" class="descripcion">
-            <h3>Lunes</h3>
-            <p>Sancocho de Gallina  </p></a><a href="#"><img src="images/sample-recipe.jpg" alt="Sancocho de Gallina"></a></figure>
-        <p class="extra-tools">
-          <span class="icon icon-share"></span>
-          <span class="icon icon-timer"></span> <span class="time"> 30 mins.</span>
-          <div class="estrellas">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-          
-          </div>
-        </p>
-      </div>
-    </div>
-    <!--Receta Miércoles-->
-    <!--Receta Jueves-->
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 receta-dia">
-      <div class="content">
-        <figure class="img-receta"><a href="#" class="descripcion">
-            <h3>Lunes</h3>
-            <p>Sancocho de Gallina  </p></a><a href="#"><img src="images/sample-recipe.jpg" alt="Sancocho de Gallina"></a></figure>
-        <p class="extra-tools">
-          <span class="icon icon-share"></span>
-          <span class="icon icon-timer"></span> <span class="time"> 30 mins.</span>
-          <div class="estrellas">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-          
-          </div>
-        </p>
-      </div>
-    </div>
-  </article>
-</section>
+
 <!--/-Contenido-->
 <!--/-Contenido-->
 <!--F Contenido-->

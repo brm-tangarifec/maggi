@@ -1,27 +1,36 @@
-<aside class="row recetas-relacionadas">
-<h2>también te sugerimos</h2>
 
-<article class="col-lg-4 col-md-4 col-sm-4 col-xs-12 module-box module-box-receta">
-  <figure class="img-wrapper"><img src='<?php print_r(file_create_url($nod->field_receta_imgpq["und"][0]["uri"])); ?>' alt="Ejemplo ALT" title="Ejemplo de Title" class="img-article img-responsive"></figure>
-  <h3><?php print_r($nod->title); ?></h3>
-  <!--Wrapper para tiempo, compartir, enviar, favorito y ver más-->
-  <div class="shareThis">
-    <div class="botones-redes-wrapper" style="display:none"></div>
-    <p class="tiempo">
-      <span class="mdi-device-access-alarm"></span>
-      <?php print_r($time." min"); ?>
-    </p>
-    <div class="shareThis">
-      <div class="botones-redes-wrapper" style="display:none"></div>
-      <div class="article-action">
-        <span class="fa fa-share-alt" displaytext="sharethis"></span>
+<section class="container-fluid recetas recetas-relacionadas">
+  <article class="row">
+    <h2 class="titular-bg">
+      <span class="icon icon-recetas"></span> Recetas con Base para Salsa Bechamel MAGGI®
+      
+    </h2>
+
+  <?php foreach ($variables['nodx'] as $key => $value) : ?>
+
+    <!--Receta martes-->
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 receta-dia-producto">
+      <div class="content">
+        <figure class="img-receta"><a href="#" class="descripcion">
+            <h3><?php print_r($value->field_receta_dia_semana["und"]['0']['value']);?></h3>
+            <p><?php print_r($value->title);?></p></a><a href="#"><img src="<?php print_r(file_create_url($value->field_receta_imagen_pequena['und'][0]['uri']))?>" alt="<?php print_r($value->field_receta_imagen_pequena['und'][0][alt])?>" title="<?php print_r($value->field_receta_imagen_pequena['und'][0]['title'])?>"></a></figure>
+        <p class="extra-tools">
+          <span class="icon icon-share"></span>
+          <span class="icon icon-timer"></span> <span class="time"><?php print_r($value->field_receta_tiempo["und"]['0']['value'].' '.$value->field_receta_tiempo_lista["und"]['0']['value']);?></span>
+          <div class="estrellas">
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+            <span class="glyphicon glyphicon-star-empty"></span>
+          
+          </div>
+        </p>
       </div>
     </div>
-  </div>
-  <div class="verMas btn btn-primary readmore">
-    <a href='<?php print_r("../".$url); ?>'>Ver Más</a>
-  </div>
-</article>
-<?php } ?>
-</aside>
+    <?php endforeach; ?>
+    <!--Receta martes-->
 
+    </div>
+  </article>
+</section>

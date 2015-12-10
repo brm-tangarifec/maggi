@@ -16,12 +16,13 @@ function cbn_nodes_related_block_view($delta = '') {
         $nodeId=currentnode()->nid;
         echo $nodeId;
         $buscaEsto=search_nodes_related($nodeId);
-        $cargaNodos= node_load_multiple($buscaEsto);
-        var_dump($cargaNodos);
-
+        $variables['nodx']= carga_nodos_recomendados($buscaEsto);
+       //var_dump($cargaNodos);
+        $block['content'] = theme('theme_nodes_related', $variables);
+        return $block;
     break;
-              }
-   return $block;
+  }
+
 }
 
 function cbn_nodes_related_theme(){
@@ -62,9 +63,15 @@ function search_nodes_related($taxo){
 }
 
 function carga_nodos_recomendados($buscaEsto) {
-  var_dump($buscaEsto);
-  echo 'Hola';
-  $cargaVainas= node_load($buscaEsto);
+  //var_dump($buscaEsto);
+  //echo 'Hola';
+  //var_dump($buscaEsto);
+  $cargaVainas = array();
+  foreach ($buscaEsto['tax'] as $key => $value) {
+    //var_dump($value["entity_id"]);
+    $cargaVainas[]= node_load($value["entity_id"]);
+  }
+  
   //return entity_load('node', $nids, $reset);
   return $cargaVainas;
 }
