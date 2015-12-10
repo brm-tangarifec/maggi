@@ -95,7 +95,10 @@ jQuery(document).ready(function(){
 
 	/* BXSLIDER */
 	$(document).ready(function(){
-  		$('.bxslider').bxSlider();
+  		$('.bxslider').bxSlider(
+  			minSlides: 4,
+  			maxSlides: 4,
+  		);
 	});
 
 });
