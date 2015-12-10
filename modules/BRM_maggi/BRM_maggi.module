@@ -42,6 +42,10 @@ function BRM_maggi_block_info() {
          'info' => t("block static - Recetario"),
          'cache' => DRUPAL_CACHE_CUSTOM,
       );
+      $blocks['block_label_productos'] = array(
+         'info' => t("block static - Productos"),
+         'cache' => DRUPAL_CACHE_CUSTOM,
+      );
       $blocks['slider_recetario'] = array(
          'info' => t("Slider: Recetario"),
          'cache' => DRUPAL_CACHE_CUSTOM,
@@ -69,7 +73,11 @@ function BRM_maggi_block_view($delta = '') {
     case 'block_label_recetario':
       $block['content'] = theme('block_label_recetario',$variables);
       return $block;
-    break;  
+    break;
+    case 'block_label_productos':
+      $block['content'] = theme('block_label_productos',$variables);
+      return $block;
+    break; 
     case 'slider_recetario':
       $variables['nox'] = get_nodes_nodequeue(1);
       $block['content'] = theme('slider_recetario',$variables);
@@ -94,6 +102,9 @@ function BRM_maggi_theme() {
      	),
       'block_label_recetario' => array(
         'template' => 'theme/block_label_recetario'
+      ),
+      'block_label_productos' => array(
+        'template' => 'theme/block_label_productos'
       ),
       'slider_recetario' => array(
         'template' => 'theme/slider_recetario'

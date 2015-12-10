@@ -14,7 +14,7 @@ function cbn_nodes_related_block_view($delta = '') {
     switch ($delta) {
   case 'cbn_module_nodes_related':
         $nodeId=currentnode()->nid;
-        echo $nodeId;
+        //echo $nodeId;
         $buscaEsto=search_nodes_related($nodeId);
         $variables['nodx']= carga_nodos_recomendados($buscaEsto);
        //var_dump($cargaNodos);
