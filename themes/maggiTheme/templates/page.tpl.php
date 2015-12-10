@@ -129,4 +129,3 @@
    $block = module_invoke('BRM_Maggi', 'block_view', 'footer');
     print render($block['content']);
   ?>
-</div>
