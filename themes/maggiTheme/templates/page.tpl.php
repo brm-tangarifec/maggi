@@ -99,7 +99,7 @@
 
 <!--F Header-->
 <!--Contenido-->
-<div class="container-fluid">
+<div class="container-fluid u-no-border">
   <?php if ($page['leaderboard']) : ?>           
     <?php print render($page['leaderboard']); ?>           
   <?php endif; ?> 
