@@ -21,9 +21,6 @@ jQuery(document).ready(function(){
 		 $(".login").removeClass('animated slideInDown').slideUp();
 	});
 
-
-
-
 		jQuery('.block-content').removeClass('content');
 		if(jQuery('.productoSazon').length>0){
 
@@ -79,5 +76,13 @@ jQuery(document).ready(function(){
 
 
 	};
+
+	$('.block-brm-maggi .cont-secun .cont-secun-item').click(function(){
+		var idvideoPrin = $('.block-brm-maggi .cont-princ').attr('idvideo');
+		var titlePrin = $('.block-brm-maggi .cont-princ').attr('title');
+		var idvideosecun = $(this).attr('idvideosecun');
+		var titleSecun = $(this).attr('title');
+		$('.block-brm-maggi .cont-princ .embed-responsive iframe').attr("src", "https://www.youtube.com/embed/"+idvideosecun+"?rel=0&autoplay=0")embed-responsive
+	});
 
 });
