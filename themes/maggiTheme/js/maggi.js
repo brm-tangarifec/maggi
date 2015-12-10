@@ -87,7 +87,7 @@ jQuery(document).ready(function(){
 		$('.block-brm-maggi .cont-princ .embed-responsive iframe').attr("src", "https://www.youtube.com/embed/"+idvideosecun+"?rel=0&autoplay=0");
 		
 		$('.block-brm-maggi .cont-secun .cont-secun-item').attr("title",titlePrin);
-		$('.block-brm-maggi .cont-princ').attr("idvideosecun",idvideoPrin);
+		$('.block-brm-maggi .cont-secun .cont-secun-item').attr("idvideosecun",idvideoPrin);
 		$('img', this).attr("src", "http://img.youtube.com/vi/"+idvideoPrin+"/0.jpg");
 	});
 
