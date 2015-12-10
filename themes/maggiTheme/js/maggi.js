@@ -1,6 +1,7 @@
 
-var url = window.location.pathname,
+var url = window.location.pathname;
 	screenWidth = $(window).width();
+	var dominio= window.location.protocol+'//'+window.location.hostname;
 
 
 /*Funciones y animaciones del sitio web*/
@@ -44,7 +45,6 @@ jQuery(document).ready(function(){
 		$(".view-recetario-2do-tiempo .view-content").addClass('hidden');
 		$(document).on("change", ".form-select", function () {
 
-			var dominio= window.location.protocol+'//'+window.location.hostname;
 
 			// $("#block-views-recetario-1er-tiempo-block-9").append('<div class="loader"><img src="'+dominio+'/consumidor_nestle_com_co/sites/all/themes/casabienestar/images/icono-recetario.svg" width="60" class="img-responsive"><p>Estamos preparando las recetas</p></div>');
 				$("#content .clajsdes").addClass('hidden');

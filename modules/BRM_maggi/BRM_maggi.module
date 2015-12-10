@@ -74,7 +74,12 @@ function BRM_maggi_block_view($delta = '') {
       $variables['nox'] = get_nodes_nodequeue(1);
       $block['content'] = theme('slider_recetario',$variables);
       return $block;
-    break;  
+    break;
+    case 'recetas_producto_recomendadas':
+      $variables['nox'] = get_nodes_nodequeue(1);
+      $block['content'] = theme('slider_recetario',$variables);
+      return $block;
+    break; 
   }
 }
 
