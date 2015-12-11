@@ -284,7 +284,7 @@ $(document).on("ready", function () {
 		  	
 			count++;
 			return false;
-			}if( count == 2){
+			}if( count == 1 && $(".botones-redes-wrapper").has("a") ){
 
 				$(".botones-redes-wrapper").hide("fade");
 
@@ -320,9 +320,10 @@ $(document).on("ready", function () {
 				});
 
 				count++;
+				return false;
 
 			}else{
-					count=3;
+					count=2;
 				};
 
 		});
