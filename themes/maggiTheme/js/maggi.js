@@ -209,11 +209,15 @@ $(document).on("ready", function () {
 
 		btnShare.on("click", function () {
 			var j = $(this).parent().find("a").attr('href'),
-			 	tituloArticle = $(this).parent().find(".dia-receta").text();
+			 	tituloArticle = $(this).parent().find(".dia-receta").text(),
+			 	link = dominio;
 
 			count++;
 
 			if ( count == 1 ){
+
+				var urlShare= link + j;
+	    		oli=urlShare;
 				/*Generación de los botones para compartir*/
 
 				jQuery(this).prev().show("fade").html('<a href="javascript:;" title="Compartir en Facebook" class="pop share-icon share-icon-facebook" data-share="fb" rel="nofollow"></a><a href="javascript:;" title="Compartir en G+" class="pop share-icon share-icon-googleplus" data-share="g+"></a><a href="javascript:;" title="Compartir en Twitter" class="pop share-icon share-icon-twitter" data-share="tw"></a>');
