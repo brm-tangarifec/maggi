@@ -284,7 +284,7 @@ $(document).on("ready", function () {
 		  	
 			count++;
 			return false;
-			}if( count == 1 && $(".botones-redes-wrapper").has("a") ){
+			}if( count == 1 && $(".botones-redes-wrapper").css("display") == "block" ){
 
 				$(".botones-redes-wrapper").hide("fade");
 
