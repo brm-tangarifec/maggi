@@ -11,7 +11,7 @@
     <!--Receta martes-->
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 receta-dia-producto">
       <div class="content">
-        <figure class="img-receta"><a href="#" class="descripcion">
+        <figure class="img-receta"><a href="/<?php print_r($value->field_receta_url["und"]['0']['value'])?>" class="descripcion">
             <!--h3><?php print_r($value->field_receta_dia_semana["und"]['0']['value']);?></h3-->
             <p><?php print_r($value->title);?></p></a><a href="#"><img src="<?php print_r(file_create_url($value->field_receta_imagen_pequena['und'][0]['uri']))?>" alt="<?php print_r($value->field_receta_imagen_pequena['und'][0][alt])?>" title="<?php print_r($value->field_receta_imagen_pequena['und'][0]['title'])?>"></a></figure>
         <p class="extra-tools">
