@@ -7,6 +7,7 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
+	/* JS Filtros Livianas y Para niños*/
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
 	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1 .views-widget").remove();
 	$("#block-views-vista-filtro-livianas-block").css("display","none");
@@ -23,6 +24,7 @@ jQuery(document).ready(function(){
 		$("#block-views-vista-filtro-livianas-block").css("display","none");
 		$(".clajsdes").css("display","none");
 	});
+	/* FIN JS Filtros Livianas y Para niños*/
 
 	
 
