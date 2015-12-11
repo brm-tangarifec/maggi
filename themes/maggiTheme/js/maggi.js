@@ -7,6 +7,8 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
+	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
+
 	/*slide de login
 	 Abrimos el panel de login*/
 	$(".btn-login").on("click", function () {
