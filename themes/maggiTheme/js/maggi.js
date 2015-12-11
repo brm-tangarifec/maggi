@@ -9,6 +9,21 @@ jQuery(document).ready(function(){
 
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
 	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1 .views-widget").remove();
+	$("#block-views-vista-filtro-livianas-block").css("display","none");
+	$("#block-views-vista-para-ni-os-block").css("display","none");
+
+	$(".views-widget-filter-field_receta_categoria_liviana_tid").click(function(){
+		$("#block-views-vista-filtro-livianas-block").css("display","block");
+		$("#block-views-vista-para-ni-os-block").css("display","none");
+		$(".clajsdes").css("display","none");
+	});
+
+	$("	views-widget-filter-field_receta_categoria_para_ni_o_tid_1").click(function(){
+		$("#block-views-vista-para-ni-os-block").css("display","block");
+		$("#block-views-vista-filtro-livianas-block").css("display","none");
+		$(".clajsdes").css("display","none");
+	});
+
 	
 
 	/*slide de login
