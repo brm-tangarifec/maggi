@@ -228,14 +228,14 @@ $(document).on("ready", function () {
 		btnShare.on("click", function () {
 			var j = $(this).parent().find("a").attr('href'),
 			 	tituloArticle = $(this).parent().find(".dia-receta").text(),
-			 	link = dominio;
+			 	link = dominio,
+			 	urlshare = link + j,
+			 	oli = urlShare;
 
 			count++;
 
 			if ( count == 1 ){
 
-				var urlShare= link + j;
-	    		oli=urlShare;
 				/*Generación de los botones para compartir*/
 
 				jQuery(this).prev().show("fade").html('<a href="javascript:;" title="Compartir en Facebook" class="pop share-icon share-icon-facebook" data-share="fb" rel="nofollow"></a><a href="javascript:;" title="Compartir en G+" class="pop share-icon share-icon-googleplus" data-share="g+"></a><a href="javascript:;" title="Compartir en Twitter" class="pop share-icon share-icon-twitter" data-share="tw"></a>');
@@ -272,8 +272,45 @@ $(document).on("ready", function () {
 		  	
 			count++;
 			return false;
+			}if( count == 2){
+
+				$(".botones-redes-wrapper").hide("fade");
+
+
+				jQuery(this).prev().show("fade").html('<a href="javascript:;" title="Compartir en Facebook" class="pop share-icon share-icon-facebook" data-share="fb" rel="nofollow"></a><a href="javascript:;" title="Compartir en G+" class="pop share-icon share-icon-googleplus" data-share="g+"></a><a href="javascript:;" title="Compartir en Twitter" class="pop share-icon share-icon-twitter" data-share="tw"></a>');
+
+				jQuery(".pop").click(function () {
+
+					data = jQuery(this).attr('data-share');
+
+					//Funcion compartir facebook
+					if(data=='fb'){
+						Share();
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						count=0;
+						return false;
+					}else if(data=='tw'){
+						urlTw="https://twitter.com/share?url="+oli;
+						window.open(urlTw,'toolbar=0,resizable=1,status=0,width=640,height=528');
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						count=0;
+						return false;
+					}else if(data=='g+'){
+						urlG="https://plusone.google.com/_/+1/confirm?hl=en&url="+oli;
+						window.open(urlG,'toolbar=0,resizable=1,status=0,width=640,height=528');
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						count=0;
+						return false;
+					}
+				});
+
+				count++;
+
 			}else{
-					count=2;
+					count=3;
 				};
 
 		});
