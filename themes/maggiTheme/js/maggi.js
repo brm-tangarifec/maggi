@@ -7,6 +7,11 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
+	$( "select#edit-field-receta-categoria-tid" ).delegate( "option", "change", function() {
+  		$("#block-views-vista-para-ni-os-block").css("display","none");
+  		$("#block-views-vista-filtro-livianas-block").css("display","none");
+	});
+
 	/* JS Filtros Livianas y Para niños*/
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
 	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1 .views-widget").remove();
