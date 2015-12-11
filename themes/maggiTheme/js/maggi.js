@@ -81,7 +81,6 @@ jQuery(document).ready(function(){
 
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
-		console.log(url);
 		$(".view-recetario-2do-tiempo .view-content").css("display","none");
 		$(document).on("change", ".form-select", function () {
 
@@ -244,7 +243,6 @@ $(document).on("ready", function () {
 				jQuery(".pop").click(function () {
 
 					data = jQuery(this).attr('data-share');
-					console.log(data);
 
 					//Funcion compartir facebook
 					if(data=='fb'){
