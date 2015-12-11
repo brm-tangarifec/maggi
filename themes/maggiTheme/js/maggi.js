@@ -8,6 +8,8 @@ var url = window.location.pathname,
 jQuery(document).ready(function(){
 
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
+	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1 .views-widget").remove();
+	
 
 	/*slide de login
 	 Abrimos el panel de login*/
