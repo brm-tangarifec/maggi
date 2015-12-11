@@ -226,10 +226,11 @@ $(document).on("ready", function () {
 		count = 0;
 
 		btnShare.on("click", function () {
+
 			var j = $(this).parent().find("a").attr('href'),
 			 	tituloArticle = $(this).parent().find(".dia-receta").text(),
 			 	link = dominio,
-			 	urlshare = link + j,
+			 	urlShare = link + j,
 			 	oli = urlShare;
 
 			count++;
