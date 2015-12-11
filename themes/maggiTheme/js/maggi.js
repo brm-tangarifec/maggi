@@ -207,7 +207,7 @@ $(document).on("ready", function () {
 	var btnShare = $(".block-content .icon-share"),
 		count = 0;
 
-		btnShare.on("click" function () {
+		btnShare.on("click", function () {
 			var j = $(this).parent().find("a").attr('href'),
 			 	tituloArticle = $(this).parent().find(".dia-receta").text();
 
