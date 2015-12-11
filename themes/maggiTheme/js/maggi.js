@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 		$(".clajsdes").css("display","none");
 	});
 
-	$("	views-widget-filter-field_receta_categoria_para_ni_o_tid_1").click(function(){
+	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1").click(function(){
 		$("#block-views-vista-para-ni-os-block").css("display","block");
 		$("#block-views-vista-filtro-livianas-block").css("display","none");
 		$(".clajsdes").css("display","none");
