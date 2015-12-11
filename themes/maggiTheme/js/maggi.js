@@ -63,7 +63,7 @@ jQuery(document).ready(function(){
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
 		console.log(url);
-		$(".view-recetario-2do-tiempo .view-content").addClass('hidden');
+		$(".view-recetario-2do-tiempo .view-content").css("display","none");
 		$(document).on("change", ".form-select", function () {
 
 			$("#block-views-vista-para-ni-os-block").css("display","none");
@@ -73,9 +73,9 @@ jQuery(document).ready(function(){
 				 $(".valid option", this).addClass("hidden");
 
 			window.setTimeout(function () {
-				$(".view-recetario-2do-tiempo .view-content").removeClass("hidden");
+				$(".view-recetario-2do-tiempo .view-content").css("display","block");
 				$("#edit-reset").addClass('btn btn-primary');
-				 $("option", this).removeClass("hidden");
+				//$("option", this).removeClass("hidden");
 			// console.log("oli");
 			},10000);
 			
