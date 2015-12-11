@@ -36,6 +36,8 @@ jQuery(document).ready(function(){
 		$("#block-views-vista-filtro-livianas-block").css("display","block");
 		$("#block-views-vista-para-ni-os-block").css("display","none");
 		$(".clajsdes").css("display","none");
+		$(".view-recetario-2do-tiempo .view-content").css("display","none");
+		
 	});
 
 	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1").click(function(){
@@ -81,9 +83,18 @@ jQuery(document).ready(function(){
 
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
-		$(".view-recetario-2do-tiempo .view-content").css("display","none");
+		var buscaReceta=window.location.search;
+		var num = buscaReceta.length;
+		if( buscaReceta == 0){
+			$(".view-recetario-2do-tiempo .view-content").css("display","none");
+		}else{
+			$(".clajsdes").css("display","none");
+		}
+		
+		
 		$(document).on("change", ".form-select", function () {
 
+			$("#views-exposed-form-recetario-2do-tiempo-block").submit();
 			$("#block-views-vista-para-ni-os-block").css("display","none");
   			$("#block-views-vista-filtro-livianas-block").css("display","none");
 			// $("#block-views-recetario-1er-tiempo-block-9").append('<div class="loader"><img src="'+dominio+'/consumidor_nestle_com_co/sites/all/themes/casabienestar/images/icono-recetario.svg" width="60" class="img-responsive"><p>Estamos preparando las recetas</p></div>');
