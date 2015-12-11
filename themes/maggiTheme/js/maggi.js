@@ -211,13 +211,71 @@ $(document).on("ready", function () {
 			var j = $(this).parent().find("a").attr('href'),
 			 	tituloArticle = $(this).parent().find(".dia-receta").text();
 
-			tituloArticle = $.trim(tituloArticle);
+			count++;
 
-			console.log( j + tituloArticle );
+			if ( count == 1 ){
+				/*Generación de los botones para compartir*/
 
+				jQuery(this).prev().show("fade").html('<a href="javascript:;" title="Compartir en Facebook" class="pop share-icon share-icon-facebook" data-share="fb" rel="nofollow"></a><a href="javascript:;" title="Compartir en G+" class="pop share-icon share-icon-googleplus" data-share="g+"></a><a href="javascript:;" title="Compartir en Twitter" class="pop share-icon share-icon-twitter" data-share="tw"></a>');
 
+				jQuery(".pop").click(function () {
+
+					data = jQuery(this).attr('data-share');
+					console.log(data);
+
+					//Funcion compartir facebook
+					if(data=='fb'){
+						Share();
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						count=0;
+					}else if(data=='tw'){
+						urlTw="https://twitter.com/share?url="+oli;
+						window.open(urlTw,'toolbar=0,resizable=1,status=0,width=640,height=528');
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						count=0;
+						return false;
+					}else if(data=='g+'){
+						urlG="https://plusone.google.com/_/+1/confirm?hl=en&url="+oli;
+						window.open(urlG,'toolbar=0,resizable=1,status=0,width=640,height=528');
+						$('.botones-redes-wrapper').hide('fade');
+						$('.botones-redes-wrapper').html("");
+						return false;
+						count=0;
+					}
+				});
+
+			//Click sobre los botones de redes sociales
+		  	
+			count++;
+			return false;
+			}else{
+					count=2;
+				};
 
 		});
+
+	jQuery(".pop").on("click", function () {
+		count =0;
+		$('.botones-redes-wrapper').hide('fade');
+		$('.botones-redes-wrapper').html("");
+	});
+
+
+
+		
+	/*Funcion para compartir en facebook*/
+	var oli;
+	function Share(url) {
+	  FB.ui({
+	  method: 'share_open_graph',
+	  action_type: 'og:share',
+	  action_properties: JSON.stringify({
+	      object: oli,
+	  })
+	}, function(response){});
+	};
 
 	
 });
