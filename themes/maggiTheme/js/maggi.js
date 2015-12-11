@@ -252,6 +252,7 @@ $(document).on("ready", function () {
 						$('.botones-redes-wrapper').hide('fade');
 						$('.botones-redes-wrapper').html("");
 						count=0;
+						return false;
 					}else if(data=='tw'){
 						urlTw="https://twitter.com/share?url="+oli;
 						window.open(urlTw,'toolbar=0,resizable=1,status=0,width=640,height=528');
@@ -264,8 +265,8 @@ $(document).on("ready", function () {
 						window.open(urlG,'toolbar=0,resizable=1,status=0,width=640,height=528');
 						$('.botones-redes-wrapper').hide('fade');
 						$('.botones-redes-wrapper').html("");
-						return false;
 						count=0;
+						return false;
 					}
 				});
 
