@@ -7,11 +7,6 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
-	$(".view-recetario-2do-tiempo .views-exposed-widgets .views-exposed-widget .form-type-select").delegate( "select#edit-field-receta-categoria-tid", "change", function() {
-  		$("#block-views-vista-para-ni-os-block").css("display","none");
-  		$("#block-views-vista-filtro-livianas-block").css("display","none");
-	});
-
 	/* JS Filtros Livianas y Para niños*/
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
 	$(".views-widget-filter-field_receta_categoria_para_ni_o_tid_1 .views-widget").remove();
@@ -71,7 +66,8 @@ jQuery(document).ready(function(){
 		$(".view-recetario-2do-tiempo .view-content").addClass('hidden');
 		$(document).on("change", ".form-select", function () {
 
-
+			$("#block-views-vista-para-ni-os-block").css("display","none");
+  			$("#block-views-vista-filtro-livianas-block").css("display","none");
 			// $("#block-views-recetario-1er-tiempo-block-9").append('<div class="loader"><img src="'+dominio+'/consumidor_nestle_com_co/sites/all/themes/casabienestar/images/icono-recetario.svg" width="60" class="img-responsive"><p>Estamos preparando las recetas</p></div>');
 				$("#content .clajsdes").addClass('hidden');
 				 $(".valid option", this).addClass("hidden");
