@@ -7,7 +7,7 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
-	$( "select#edit-field-receta-categoria-tid" ).delegate( "option", "change", function() {
+	$(".view-recetario-2do-tiempo .views-exposed-widgets .views-exposed-widget .form-type-select").delegate( "select#edit-field-receta-categoria-tid", "change", function() {
   		$("#block-views-vista-para-ni-os-block").css("display","none");
   		$("#block-views-vista-filtro-livianas-block").css("display","none");
 	});
