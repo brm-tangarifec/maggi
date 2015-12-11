@@ -2,7 +2,7 @@
 <section class="container-fluid recetas recetas-relacionadas">
   <article class="row">
     <h2 class="titular-bg">
-      <span class="icon icon-recetas"></span> Recetas con Base para Salsa Bechamel MAGGI®
+      <span class="icon icon-recetas"></span> Recetas con <?php print_r($variables['title']);?>
       
     </h2>
 

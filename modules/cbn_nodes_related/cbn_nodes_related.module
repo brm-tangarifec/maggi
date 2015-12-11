@@ -17,7 +17,9 @@ function cbn_nodes_related_block_view($delta = '') {
         //echo $nodeId;
         $buscaEsto=search_nodes_related($nodeId);
         $variables['nodx']= carga_nodos_recomendados($buscaEsto);
-       //var_dump($cargaNodos);
+        //$variables['title']= get_title_magically($nodeId);
+        $variables['title']=get_title_magically($nodeId);
+       //var_dump($variables['title']);
         $block['content'] = theme('theme_nodes_related', $variables);
         return $block;
     break;
@@ -74,4 +76,11 @@ function carga_nodos_recomendados($buscaEsto) {
   
   //return entity_load('node', $nids, $reset);
   return $cargaVainas;
+}
+
+function get_title_magically($nid)
+{
+  //var_dump($nid);
+ $node = node_load($nid);
+ return $node->title;
 }
