@@ -282,9 +282,10 @@ $(document).on("ready", function () {
 
 			//Click sobre los botones de redes sociales
 		  	
-			count++;
+			//count++;
+			console.log(count);
 			return false;
-			}if( count == 1 && $(".botones-redes-wrapper").css("display") == "block" ){
+			}if( count == 2 ){
 
 				$(".botones-redes-wrapper").hide("fade");
 
@@ -319,7 +320,8 @@ $(document).on("ready", function () {
 					}
 				});
 
-				count++;
+				count = 1;
+				console.log(count);
 				return false;
 
 			}else{
