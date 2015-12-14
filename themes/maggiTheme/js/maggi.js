@@ -170,8 +170,7 @@ jQuery(document).ready(function(){
 		categoriaProd = $(".item-list-q"),
 		urlFiltro = window.location.pathname+window.location.search+window.location.hash,
 		port = "/fbappCasaBienestar";
-
-	if ( url == port+"/productos-promociones/" ){
+	if ( url == port+"/productos-promociones" || url == port+"/productos-promociones/"){
 
 			categoriaProd.addClass('productos').html("");
 
