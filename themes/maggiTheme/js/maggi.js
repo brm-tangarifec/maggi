@@ -171,7 +171,7 @@ jQuery(document).ready(function(){
 		urlFiltro = window.location.pathname+window.location.search+window.location.hash,
 		port = "/fbappCasaBienestar";
 
-	if ( url == "/fbappCasaBienestar/productos-promociones" ){
+	if ( url == port+"/productos-promociones/" ){
 
 			categoriaProd.addClass('productos').html("");
 
@@ -185,7 +185,7 @@ jQuery(document).ready(function(){
 				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
-	}if ( urlFiltro == "/productos-promociones?qt-prodcutos_y_promociones=0#qt-prodcutos_y_promociones" ){
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=0#qt-prodcutos_y_promociones" ){
 
 			categoriaProd.addClass('productos').html("");
 
@@ -199,7 +199,7 @@ jQuery(document).ready(function(){
 				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
-	}if ( urlFiltro == "/productos-promociones?qt-prodcutos_y_promociones=1#qt-prodcutos_y_promociones" ){
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=1#qt-prodcutos_y_promociones" ){
 
 			categoriaProd.addClass('productos').html("");
 
@@ -213,7 +213,7 @@ jQuery(document).ready(function(){
 				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
-	}if ( urlFiltro == "/productos-promociones?qt-prodcutos_y_promociones=2#qt-prodcutos_y_promociones" ){
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=2#qt-prodcutos_y_promociones" ){
 
 			categoriaProd.addClass('productos').html("");
 
@@ -227,7 +227,7 @@ jQuery(document).ready(function(){
 				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
-	}if ( urlFiltro == "/productos-promociones?qt-prodcutos_y_promociones=3#qt-prodcutos_y_promociones" ){
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=3#qt-prodcutos_y_promociones" ){
 
 			categoriaProd.addClass('productos').html("");
 
