@@ -1,4 +1,7 @@
 /*App de facebook*/
+$(document).ready(function(){
+  $('.bxsliderHome').bxSlider();
+});
 
 window.fbAsyncInit = function() {
     FB.init({
