@@ -30,8 +30,8 @@ jQuery(document).ready(function(){
 	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
-	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option").text();
-	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option").text();
+	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option:first").text();
+	var valueParaAllDay = $("select#edit-field-receta-categoria-tid optionfirst").text();
 	console.log(valueParaComp);
 	if(valueParaComp == "- Any -"){
 		$("select#edit-field-receta-categoria-para-comp-tid option").text(paraComp);
