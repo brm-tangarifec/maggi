@@ -32,7 +32,7 @@ jQuery(document).ready(function(){
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option").text();
 	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option").text();
-
+	console.log(valueParaComp);
 	if(valueParaComp == "- Any -"){
 		$("select#edit-field-receta-categoria-para-comp-tid option").text(paraComp);
 	}
