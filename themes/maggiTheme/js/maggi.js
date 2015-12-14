@@ -31,13 +31,13 @@ jQuery(document).ready(function(){
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option:first").text();
-	var valueParaAllDay = $("select#edit-field-receta-categoria-tid optionfirst").text();
+	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option:first").text();
 	console.log(valueParaComp);
 	if(valueParaComp == "- Any -"){
-		$("select#edit-field-receta-categoria-para-comp-tid option").text(paraComp);
+		$("select#edit-field-receta-categoria-para-comp-tid option:first").text(paraComp);
 	}
 	if(valueParaAllDay == "- Any -"){
-		$("select#edit-field-receta-categoria-tid option").text(paraAllDay);
+		$("select#edit-field-receta-categoria-tid option:first").text(paraAllDay);
 	}
 	/* FIN JS Label filtros expuestos*/
 
