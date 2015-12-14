@@ -29,6 +29,9 @@ var url = window.location.pathname,
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
+
+/*Variable para dar el path del stiio*/
+	var port = "/fbappCasaBienestar";
 	/* JS Label filtros expuestos*/
 	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
@@ -132,9 +135,11 @@ jQuery(document).ready(function(){
 
 
 	//Click acordeon recetas
-	if ( screenWidth <= 770 &&  url == port ) {
+	if ( screenWidth <= 770 &&  url == port+'/' ) {
+
 
 		var receta = $(".receta-dia");
+		console.log($(document).find(receta));
 
 		$(".receta-dia").on('click', function() {
 
@@ -171,8 +176,8 @@ jQuery(document).ready(function(){
 		caldos = $("#quicktabs-tab-prodcutos_y_promociones-2").attr('href'),
 		sazonadores = $("#quicktabs-tab-prodcutos_y_promociones-3").attr('href'),
 		categoriaProd = $(".item-list-q"),
-		urlFiltro = window.location.pathname+window.location.search+window.location.hash,
-		port = "/fbappCasaBienestar";
+		urlFiltro = window.location.pathname+window.location.search+window.location.hash;
+		
 	if ( url == port+"/productos-promociones" || url == port+"/productos-promociones/"){
 
 			categoriaProd.addClass('productos').html("");
