@@ -65,7 +65,8 @@
 <!--[if gt IE 8]><!--><html<?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 <head>
 <?php print $head; ?>
-<title><?php print $head_title; ?></title>
+<title>Maggi</title>
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
 <?php print $styles; ?>
 <?php print $scripts; ?>
 <?php print $polyfills; ?>
