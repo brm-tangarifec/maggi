@@ -29,7 +29,9 @@ jQuery(document).ready(function(){
 	/* JS Label filtros expuestos*/
 	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
+	$("div#edit-field-receta-categoria-para-comp-tid-wrapper label").css("display","none");
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
+	$("div#edit-field-receta-categoria-tid-wrapper label").css("display","none");
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option:first").text();
 	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option:first").text();
 	console.log(valueParaComp);
