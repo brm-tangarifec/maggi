@@ -25,7 +25,9 @@ var url = window.location.pathname,
 
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
+
 	/* JS Label filtros expuestos*/
+	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option").text();
