@@ -132,7 +132,7 @@ jQuery(document).ready(function(){
 
 
 	//Click acordeon recetas
-	if ( screenWidth <= 770 ) {
+	if ( screenWidth <= 770 &&  url == port+"/" ) {
 
 		var receta = $(".receta-dia");
 
