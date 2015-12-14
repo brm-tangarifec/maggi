@@ -98,12 +98,13 @@
     ?>
 
 <!--F Header-->
-<!--Contenido-->
+<!--Region que imprime el Slider mediante Context-->
 <div class="container-fluid u-no-border">
   <?php if ($page['leaderboard']) : ?>           
     <?php print render($page['leaderboard']); ?>           
   <?php endif; ?> 
 </div>
+<!--FIN Region que imprime el Slider mediante Context-->
 <!--Vista recetas-->
 <div class="container-fluid recetas">
   <div class="row">
