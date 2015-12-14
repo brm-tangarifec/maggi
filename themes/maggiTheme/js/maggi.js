@@ -25,6 +25,19 @@ var url = window.location.pathname,
 
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
+	/* JS Label filtros expuestos*/
+	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
+	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
+	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option").text();
+	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option").text();
+
+	if(valueParaComp == "- Any -"){
+		$("select#edit-field-receta-categoria-para-comp-tid option").text(paraComp);
+	}
+	if(valueParaAllDay == "- Any -"){
+		$("select#edit-field-receta-categoria-tid option").text(paraAllDay);
+	}
+	/* FIN JS Label filtros expuestos*/
 
 	/* JS Filtros Livianas y Para niños*/
 	$(".views-widget-filter-field_receta_categoria_liviana_tid .views-widget").remove();
