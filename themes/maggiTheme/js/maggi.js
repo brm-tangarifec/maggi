@@ -247,7 +247,7 @@ jQuery(document).ready(function(){
 
 	/*Funcion para quitar class clearfix del contenido*/
 
-	if(jQuery('.page-temporadas').length>){
+	if(jQuery('.page-temporadas').length>0){
 		jQuery('div').removeClass('clearfix');	
 	}
 	/*Fin función*/
