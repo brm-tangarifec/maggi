@@ -169,9 +169,9 @@ jQuery(document).ready(function(){
 		sazonadores = $("#quicktabs-tab-prodcutos_y_promociones-3").attr('href'),
 		categoriaProd = $(".item-list-q"),
 		urlFiltro = window.location.pathname+window.location.search+window.location.hash,
-		port = ":"+window.location.port;
+		port = "/fbappCasaBienestar";
 
-	if ( url == "/productos-promociones" ){
+	if ( url == "/fbappCasaBienestar/productos-promociones" ){
 
 			categoriaProd.addClass('productos').html("");
 
