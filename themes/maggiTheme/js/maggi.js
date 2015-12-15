@@ -3,6 +3,11 @@ $(document).ready(function(){
   $('.bxsliderHome').bxSlider();
 });
 
+
+/*Quitamos altos de los sliders para hacerlos responsive*/
+
+$(document).find(".bx-wrapper img").removeAttr('height');
+
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '533460843481140',
