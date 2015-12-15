@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 /*Quitamos altos de los sliders para hacerlos responsive*/
 
-$(document).find(".bx-wrapper img").removeAttr('height');
+$(document).find(".bx-wrapper .image-style-none").removeAttr('height');
 
 window.fbAsyncInit = function() {
     FB.init({
