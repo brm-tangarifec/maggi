@@ -70,9 +70,14 @@
             ?>
             <!--Buscador-->
             <div class="navbar-form navbar-right">
-              <form class="search-input">
+              <!-- <form class="search-input">
                 <input type="text" placeholder="Buscar" class="form-text">
-              </form>
+
+              </form> -->
+              <?php
+              $block = module_invoke('search', 'block_view', 'form');
+              print render($block['content']);
+              ?>
             </div>
             <!--/-Buscador-->
           </div>

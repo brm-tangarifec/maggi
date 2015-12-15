@@ -113,6 +113,18 @@ function maggiTheme_process_page(&$vars) {
 }
 // */
 
+/*Reescribir template de busqueda*/
+function maggiTheme_preprocess_search_results(&$variables) {
+    if ($variables['search_results']){
+        $variables['theme_hook_suggestions'] = 'templates/search_results';
+        }
+    }
+
+function maggiTheme_preprocess_search_result(&$variables) {
+    if ($variables['search_result']){
+        $variables['theme_hook_suggestions'] = 'templates/search_result';
+        }
+    }
 
 
 /**
