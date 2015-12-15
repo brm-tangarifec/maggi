@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 $(document).find(".bx-wrapper .image-style-none").removeAttr('height');
 
+
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '533460843481140',
