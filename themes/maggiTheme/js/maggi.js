@@ -124,6 +124,9 @@ jQuery(document).ready(function(){
 
 	    		/*contenedorTabs.html("");*/
 	    		contenedorTabs.addClass("slider-botones");
+				videorecetaHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
+				tipsHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
+				temporadaHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
 
 	    		/*$('<div class="content"><h4 class="video-recetas"><a href="'+
 	          videorecetaHome+'"><span class="icon icon-video"></span> videorecetas</a></h4><h4 class="tips-consejos"><a href="'+
@@ -137,7 +140,6 @@ jQuery(document).ready(function(){
 
 				$('#quicktabs-recomendados_home li').removeClass("active");
 
-				$(videorecetaHome).replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
 
 				$(this).parent().addClass("active");
 
