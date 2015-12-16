@@ -1,14 +1,15 @@
 /*App de facebook*/
 $(document).ready(function(){
   $('.bxsliderHome').bxSlider();
+  $(document).find(".bx-wrapper .image-style-none").removeAttr('height');
+	$(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
+	$(document).find(".form-item-custom-search-types").remove();
+
 });
 
 
 /*Quitamos altos de los sliders para hacerlos responsive*/
 
-$(document).find(".bx-wrapper .image-style-none").removeAttr('height');
-$(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
-$(document).find("#edit-custom-search-types").remove();
 
 
 window.fbAsyncInit = function() {
