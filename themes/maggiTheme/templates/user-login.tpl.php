@@ -33,10 +33,11 @@
  *
  * @ingroup themeable
  */
-echo '<pre>';
+
+/*echo '<pre>';
 print_r($form);
 print render($form['account']['mail']);
-echo '</pre>';
+echo '</pre>';*/
 ?>
 
 

@@ -159,4 +159,41 @@ function maggiTheme_process_block(&$vars) {
 }
 // */
 
+/*Cambiar tpl de usuarios*/
+function maggiTheme_theme() {
+  $items = array();
+  // create custom user-login.tpl.php
+  $items['user_login'] = array(
+  'render element' => 'form',
+  'path' => drupal_get_path('theme', 'maggiTheme') . '/templates',
+  'template' => 'user-login',
+  'preprocess functions' => array(
+  'maggiTheme_preprocess_user_login'
+  ),);
+  $items['user_register_form'] = array(
+  'render element' => 'form',
+  'path' => drupal_get_path('theme', 'maggiTheme') . '/templates',
+  'template' => 'user-register-form',
+  'preprocess functions' => array(
+  'maggiTheme_preprocess_user_register_form'
+  ),
+ );
+   $items['user_pass'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'maggiTheme') . '/templates',
+    'template' => 'user-pass',
+    'preprocess functions' => array(
+    'maggiTheme_preprocess_user_pass'
+    ),
+  );
+   $items['user_profile_form'] = array(
+  'render element' => 'form',
+  'path' => drupal_get_path('theme', 'maggiTheme') . '/templates',
+  'template' => 'user-profile-edit',
+  'preprocess functions' => array(
+  'maggiTheme_preprocess_user_profile_form'
+  ),);
 
+   
+return $items;
+}

@@ -2,8 +2,10 @@
 $(document).ready(function(){
   $('.bxsliderHome').bxSlider();
   $(document).find(".bx-wrapper .image-style-none").removeAttr('height');
-	$(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
-	$(document).find(".form-item-custom-search-types").remove();
+  $(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
+  $(document).find(".form-item-custom-search-types").remove();
+
+  jQuery('body.extra .recetas>div.row').addClass('u-bg-blanco');
 
 });
 

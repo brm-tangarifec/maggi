@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * Adaptivetheme implementation to present all user profile data.
+ * Default theme implementation to present all user profile data.
  *
  * This template is used when viewing a registered member's profile page,
  * e.g., example.com/user/123. 123 being the users ID.
@@ -13,13 +14,6 @@
  * $user_profile['summary'] is provided, which contains data on the user's
  * history. Other data can be included by modules. $user_profile['user_picture']
  * is available for showing the account picture.
- *
- * Adaptivetheme variables:
- * - $is_mobile: Mixed, requires the Mobile Detect or Browscap module to return
- *   TRUE for mobile.  Note that tablets are also considered mobile devices.  
- *   Returns NULL if the feature could not be detected.
- * - $is_tablet: Mixed, requires the Mobile Detect to return TRUE for tablets.
- *   Returns NULL if the feature could not be detected.
  *
  * Available variables:
  *   - $user_profile: An array of profile items. Use render() to print them.
@@ -36,8 +30,47 @@
  * @see user-profile-item.tpl.php
  *   Where the html is handled for each item in the group.
  * @see template_preprocess_user_profile()
+ *
+ * @ingroup themeable
  */
+
+$perfil=toArray($user_profile);
+$fotoPerfil=$perfil['field_imagen_perfil']['#object']['field_imagen_perfil']['und'][0]['uri'];
+
+
+
+
 ?>
-<article id="user-<?php print $user->uid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php print render($user_profile); ?>
-</article>
+
+
+ <div class="row">
+  
+
+    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+
+
+      <figure class="img-perfil img-circle center-block">
+        
+          <img src="<?php print file_create_url($fotoPerfil)?>" >
+        
+      </figure>
+
+   </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+    <p class="nombre"> <?php print $user_profile['field_nombres'][0]['#markup']." ".$user_profile['field_apellidos'][0]['#markup']; ?></p>
+    <p><strong>Email</strong> <?php print $user_profile['mail'] ?>
+    </p>
+    <p><strong>Teléfono </strong><?php print $user_profile['field_telefono'][0]['#markup']; ?></p>
+    <p><strong>Ciudad</strong>  <?php print $perfil['field_ciudades']['#object']['field_ciudades']['und'][0]['taxonomy_term']['name'] ; ?></p>
+    <p><strong>Documento</strong>    <?php print $user_profile['field_tipo_documento'][0]['#markup']; ?> <?php print $user_profile['field_numero_documento'][0]['#markup']; ?> </p>
+    <p><strong>Fecha de nacimiento </strong><?php print $user_profile['field_fecha_nacimiento'][0]['#markup']; ?></p>
+   </div>
+ </div>
+
+
+
+ 
+        
+          
+       </div>
