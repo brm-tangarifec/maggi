@@ -7,6 +7,7 @@ $(document).ready(function(){
 /*Quitamos altos de los sliders para hacerlos responsive*/
 
 $(document).find(".bx-wrapper .image-style-none").removeAttr('height');
+$(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
 
 
 window.fbAsyncInit = function() {
