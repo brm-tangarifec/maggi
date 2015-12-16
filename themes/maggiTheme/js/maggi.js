@@ -133,9 +133,11 @@ jQuery(document).ready(function(){
 
 				cuenTab = 1;
 
-				console.log(cuenTab );
+				// console.log(cuenTab );
 
 				$('#quicktabs-recomendados_home li').removeClass("active");
+
+				$(videorecetaHome).replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
 
 				$(this).parent().addClass("active");
 
