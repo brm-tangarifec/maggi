@@ -121,7 +121,7 @@ jQuery(document).ready(function(){
 	    		videoWrap = $("#quicktabs-container-recomendados_home"),
 	    		cuenTab = 0;
 
-	    		console.log( videorecetaHome );
+	    		//console.log( videorecetaHome );
 
 
 
