@@ -37,7 +37,8 @@ jQuery(document).ready(function(){
 
 
 /*Variable para dar el path del stiio*/
-	var port = "/fbappCasaBienestar";
+	var port = "/fbappCasaBienestar",
+		laBajada=window.location.hash;
 	/* JS Label filtros expuestos*/
 	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
@@ -117,20 +118,22 @@ jQuery(document).ready(function(){
 	    		tipsHome = $("#quicktabs-tab-recomendados_home-1"),
 	    		temporadaHome = $("#quicktabs-tab-recomendados_home-2"),
 	    		contenedorTabs = $("#quicktabs-recomendados_home .quicktabs-tabs"),
+	    		videoWrap = $("#quicktabs-container-recomendados_home"),
 	    		cuenTab = 0;
-
 
 	    		console.log( videorecetaHome );
 
+
+
 	    		/*contenedorTabs.html("");*/
 	    		contenedorTabs.addClass("slider-botones");
-				videorecetaHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
-				tipsHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
-				temporadaHome.replaceWith($('<h4>' + this.innerHTML + '</h4>')); 
+				videorecetaHome.replaceWith($('<h4 class="video-recetas"> <a href="'+videorecetaHome.attr('href')+'"><span class="icon icon-video"></span>' + videorecetaHome.html() + '</a></h4>')); 
+				tipsHome.replaceWith($('<h4 class="tips-consejos"> <a href="'+tipsHome.attr('href')+'"><span class="icon icon-tips"></span>' + tipsHome.html() + '</h4>')); 
+				temporadaHome.replaceWith($('<h4  class="temporadas"> <a href="'+temporadaHome.attr('href')+'"><span class="icon icon-temporada"></span>' + temporadaHome.html() + '</h4>'));
 
-	    		/*$('<div class="content"><h4 class="video-recetas"><a href="'+
-	          videorecetaHome+'"><span class="icon icon-video"></span> videorecetas</a></h4><h4 class="tips-consejos"><a href="'+
-	          tipsHome+'"><span class="icon icon-tips"></span> tips y Consejos</a></h4><h4 class="temporadas"><a href="'+temporadaHome+'"><span class="icon icon-temporada"></span> Temporadas</a></h4></div>').appendTo(contenedorTabs);*/
+				contenedorTabs.replaceWith(  $( '<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 slider-botones"><div class="content">'+ contenedorTabs.html()+'</div></div>'  ) );
+
+				videoWrap.replaceWith( $( '<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 embed-responsive embed-responsive-16by9 slider-video">' +videoWrap.html()+ '</div>'  ) );
 
 			$("#quicktabs-recomendados_home li a").click(function () {
 
@@ -156,6 +159,14 @@ jQuery(document).ready(function(){
 				};
 
 			});
+
+
+			if ( laBajada == '#qt-recomendados_home') {
+
+					 $('html,body').animate({
+					        scrollTop: $("#quicktabs-recomendados_home").offset().top},
+					        'fade');
+			}
 
 
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
