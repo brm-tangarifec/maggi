@@ -75,7 +75,7 @@
 
               </form> -->
               <?php
-              $block = module_invoke('search', 'block_view', 'form');
+              $block = module_invoke('custom_search_blocks', 'block_view', '1');
               print render($block['content']);
               ?>
             </div>

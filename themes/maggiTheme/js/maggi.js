@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 $(document).find(".bx-wrapper .image-style-none").removeAttr('height');
 $(document).find("#custom-search-blocks-form-1 .form-type-select").remove();
+$(document).find("#edit-custom-search-types").remove();
 
 
 window.fbAsyncInit = function() {
