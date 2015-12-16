@@ -111,6 +111,49 @@ jQuery(document).ready(function(){
 	    });
 
 
+	    		/*Tabs del Home*/
+
+	    	var videorecetaHome = $("#quicktabs-tab-recomendados_home-0"),
+	    		tipsHome = $("#quicktabs-tab-recomendados_home-1"),
+	    		temporadaHome = $("#quicktabs-tab-recomendados_home-2"),
+	    		contenedorTabs = $("#quicktabs-recomendados_home .quicktabs-tabs"),
+	    		cuenTab = 0;
+
+
+	    		console.log( videorecetaHome );
+
+	    		/*contenedorTabs.html("");*/
+	    		contenedorTabs.addClass("slider-botones");
+
+	    		/*$('<div class="content"><h4 class="video-recetas"><a href="'+
+	          videorecetaHome+'"><span class="icon icon-video"></span> videorecetas</a></h4><h4 class="tips-consejos"><a href="'+
+	          tipsHome+'"><span class="icon icon-tips"></span> tips y Consejos</a></h4><h4 class="temporadas"><a href="'+temporadaHome+'"><span class="icon icon-temporada"></span> Temporadas</a></h4></div>').appendTo(contenedorTabs);*/
+
+			$("#quicktabs-recomendados_home li a").click(function () {
+
+				cuenTab = 1;
+
+				console.log(cuenTab );
+
+				$('#quicktabs-recomendados_home li').removeClass("active");
+
+				$(this).parent().addClass("active");
+
+				if (cuenTab == 1){
+
+					window.setTimeout(function () {
+
+						$("#quicktabs-container-recomendados_home").html(" ");	
+
+					},10);
+
+
+					cuenTab =0;
+				};
+
+			});
+
+
 		/*Funcion para mostrar el cargador y los divs correspondientes a las recetas*/
 		var buscaReceta=window.location.search;
 		var num = buscaReceta.length;
@@ -158,6 +201,8 @@ jQuery(document).ready(function(){
 
 
 	};
+
+
 
 	$('.block-brm-maggi .cont-secun .cont-secun-item').click(function(){
 		var idvideoPrin = $('.block-brm-maggi .cont-princ').attr('idvideo');

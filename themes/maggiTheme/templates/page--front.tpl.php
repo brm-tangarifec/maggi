@@ -122,6 +122,17 @@
 	</div>
 </div>
 <!--Vista recetas-->
+
+<!--Slider video-->
+<div class="row videos">
+    <!--Contenedor Videos-->
+    
+     <?php
+   $block = module_invoke('quicktabs', 'block_view', 'recomendados_home');
+    print render($block['content']);
+  ?>
+  </div>
+  <!--/-Slider Videos-->
 <!--Productos-->
 <!--Productos-->
   <div class="row productos">
