@@ -34,10 +34,10 @@
  * @ingroup themeable
  */
 
-/*echo '<pre>';
-print_r($form);
-print render($form['account']['mail']);
-echo '</pre>';*/
+echo '<pre>';
+//print_r($form);
+print render($form['account']['pass']);
+echo '</pre>';
 ?>
 
 <div class="row">
@@ -160,8 +160,8 @@ echo '</pre>';*/
    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
     <?php
-        //print_r($form['account']);
-       print render($form['account']['pass']);
+      print_r($form['account ']);
+       print render($form['password']);
     ?>
     
     
