@@ -16,7 +16,8 @@ $(document).ready(function(){
 	
 	$('ul.links li.flag-bookmarks .flag-bookmarks a.unflag-action').removeClass('glyphicon glyphicon-heart-empty');
 	$('ul.links li.flag-bookmarks .flag-bookmarks a.unflag-action').addClass('glyphicon glyphicon-heart');
-	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').text();
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.unflag-action').empty();
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').empty();
 });
 
 /* FIN Corazon Favoritos */
