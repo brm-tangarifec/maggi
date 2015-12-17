@@ -11,8 +11,12 @@ $(document).ready(function(){
 
 /* Corazon Favoritos */
 $(document).ready(function(){
-	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-link-toggle').addClass('glyphicon glyphicon-heart-empty');
-	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-link-toggle').text();
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').addClass('glyphicon glyphicon-heart');
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').addClass('glyphicon glyphicon-heart-empty');
+	
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.unflag-action').removeClass('glyphicon glyphicon-heart-empty');
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.unflag-action').addClass('glyphicon glyphicon-heart');
+	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').text();
 });
 
 /* FIN Corazon Favoritos */
