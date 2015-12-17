@@ -127,7 +127,7 @@ hide($content['links']);
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
       <div class="estrellas">
         <?php print render($content['field_receta_calificacion']);?>
-        <?php print render($content['flag']);?>
+        <?php print render($content['links']);?>
         <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
       <p class="extra-tools">
         <div class="botones-redes-wrapper"></div>
