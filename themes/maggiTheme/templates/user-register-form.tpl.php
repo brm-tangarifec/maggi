@@ -41,144 +41,140 @@ echo '</pre>';*/
 ?>
 
 <div class="row">
+
+  <h1 class="text-center">Registro</h1>
   <!--Imagen de perfil-->
-  <div class="col-lg-4 col-md-4 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
       print render($form['field_nombre_s_user']);
     ?>
 
   </div>
-  <!--/-Imagen de perfil-->
-</div>
-<div class="row">
-    <!--Nombres-->
-  <div class="col-lg-5 col-md-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
     <?php
       print render($form['field_apellido_s_user']);
     ?>
 
   </div>
-  <!--/-Nombres-->
-  <!--Apellidos-->
-  <div class="col-lg-5 col-md-5 col-xs-12">
-    <?php
-      print render($form['field_tipo_de_documento_user']);
-    ?>
-
-  </div>
-  <!--/-Apellidos-->
+  <!--/-Imagen de perfil-->
 </div>
+
+
 <div class="row">
   <!--Nombre Usuario-->
-  <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
       print render($form['account']['name']);
     ?>
 
   </div>
+
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+    <?php
+      print render($form['account']['mail']);
+    ?> 
+  </div>
   <!--/-Nombre Usuario-->
 </div>
-<div class="row">
-  <!--Tipo Documento-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
+<div class="row">
+
+
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
+      print render($form['field_tipo_de_documento_user']);
+    ?>
+
+  </div>
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+     <?php
+      print render($form['field_numero_de_documento_user']);
+    ?>  
+    
+
+   </div>
+</div>
+
+<div class="row">
+    <!--Nombres-->
+  
+  <!--/-Nombres-->
+  <!--Apellidos-->
+  
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+
+     <?php
       print render($form['field_g_nero_user']);
     ?>
     
 
-  </div>
-  <!--/-Tipo Documento-->
-  <!--Número de documento-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+   </div>
 
-    <?php
-      print render($form['field_numero_de_documento_user']);
-    ?>  
-    
-    
-  </div>
-  <!--/-Número de documento-->
-  <!--Fecha nacimiento-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-    
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
     <?php
       print render($form['field_fecha_de_nacimiento_user']);
     ?>
-    
-  </div>
-  <!--/-Fecha nacimiento-->
+   </div>
+
+  
 </div>
+
 <div class="row">
-  <!--Email
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-    <?php
-      /*print render($form['account']['mail']);*/
+
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-xs-offset-1">
+     <?php
+    print render($form['field_departamento']);
     ?>
-
-
   </div>
-  /-Email-->
+</div>
+
+<div class="row">
+
   <!--Teléfono-->
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
     <?php
-      print render($form['field_telefono_user ']);
+      print render($form['field_como_te_enteraste_user']);
     ?>
 
   </div>
   <!--/-Teléfono-->
 </div>
 <div class="row">
-  <!--Genero-->
+
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
-      print render($form['field_como_te_enteraste_user']);
+     /* print render($form['field_como_te_enteraste_user']);*/
     ?>
 
   </div>
-  <!--/-Genero-->
-  <!--Departamento-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-    <?php
-    print render($form['field_departamento']);
-    ?>
 
-  </div>
-  <!--/-Departamento-->
-  <!--Ciudad-->
-<!--   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
     <?php
-    /*print render($form['field_ciudad']);*/
+        //print_r($form['account']);
+       print render($form['account']['pass']);
     ?>
-           
     
-  </div> -->
+    
+    
+  </div>
+
+</div>
   <!--/-Ciudad-->
-</div>
-<div class="row">
-  <!--Contraseña y confirmar contraseña-->
-  <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
-    <?php
-        /*print_r($form['account']);*/
-        print render($form['account']['pass']);
-    ?>
-    
-    
-    
-  </div>
-</div>
+
 <div class="row">
   <!--Deseo Recibir Info-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-       <?php
-      print render($form['field_como_te_enteraste']);
-      ?>
-    
-  </div>
+
   <!--/-Deseo Recibir Info-->
   <!--Como te enteraste-->
   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
