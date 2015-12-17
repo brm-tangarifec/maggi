@@ -34,16 +34,26 @@
  * @ingroup themeable
  */
 
-echo '<pre>';
+/*echo '<pre>';
 //print_r($form);
 print render($form['account']['pass']);
-echo '</pre>';
+echo '</pre>';*/
 ?>
 
 <div class="row">
 
+
   <h1 class="text-center">Registro</h1>
+ 
   <!--Imagen de perfil-->
+  <div class="col-lg-4 col-md-4 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
+    
+    <?php
+      print render($form['picture']);
+    ?>
+
+  </div>
+  <!--/-Imagen de perfil-->
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
@@ -160,8 +170,8 @@ echo '</pre>';
    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
     <?php
-      print_r($form['account ']);
-       print render($form['password']);
+      /*print_r($form['account']);*/
+       print render($form['account']['pass']);
     ?>
     
     
