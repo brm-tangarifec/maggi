@@ -11,28 +11,7 @@
               $block = module_invoke('user', 'block_view', 'login');
             print render($block['content']);
          ?>
-        <!-- <form method="" class="form-login">
-          <!--Usuario->
-          <div class="form-group">
-            <label for="login-usuario">Usuario:</label>
-            <input type="text" id="login-usuario" name="login-usuario" class="form-control">
-          </div>
-          <!--Contraseña->
-          <div class="form-group">
-            <label for="login-password">Contraseña: </label>
-            <input type="text" id="login-password" name="login-password" class="form-control">
-          </div>
-          <!--Recordarme->
-          <div class="checkbox">
-            <label><input type="checkbox"> Recordar mi cuenta</label>
-          </div>
-          <input id="login-submit" type="submit" value="Ingresar" class="btn btn-warning">
-          <p>
-            <a href="#">¿Olvidaste tu contraseña?</a> / Eres nuevo, <a href="registro.html">regístrate</a>
-            
-            
-          </p>
-        </form> -->
+        
         <button type="button" class="btn btn-warning cerrar-login"><span class="glyphicon glyphicon-chevron-up"></span></button>
       </div>
     </div>
@@ -41,7 +20,14 @@
   <!--Registro y Login-->
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-9 col-md-offset-9 col-sm-offset-8 text-center">
-      <p><a href="<?php print base_path()?>user/register">Registrarse</a> / <a href="#" class="btn-login">Iniciar Sesión</a> <span class="icon icon-profile"></span></p>
+       <p>
+        <?php if($logged_in):?>
+          
+           <a href="<?php print base_path()?>user/">Ver Perfil</a> /  <a href="<?php print base_path()?>user/logout" class="btn-login">Cerrar sesión</a><span class="icon icon-profile"></span>
+        <?php else: ?>
+          <a href="<?php print base_path()?>user/register">Registrarse</a> / <a href="#" class="btn-login">Iniciar Sesión</a> <span class="icon icon-profile"></span>
+        <?php endif; ?>
+      </p>
     </div>
   </div>
   <!--/-Registro y Login-->

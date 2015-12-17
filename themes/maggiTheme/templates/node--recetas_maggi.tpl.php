@@ -127,12 +127,13 @@ hide($content['links']);
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
       <div class="estrellas">
         <?php print render($content['field_receta_calificacion']);?>
-        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+        <!-- <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span> -->
+      </div>
 
       <p class="extra-tools">
         <div class="botones-redes-wrapper"></div>
         <span class="icon icon-share"></span>
-        <?php print render($content['links']);?>
+        <?php print render($content['links']['flag']);?>
       </p>
     </div>
     <!--/-Estrellas y Compartir-->
@@ -178,11 +179,19 @@ hide($content['links']);
       <!--/-Preparación-->
       <!--Comentarios-->
       <div class="box-comentarios">
-        <p>0 Comentarios</p>
-        <form class="comentarios">
-          <textarea></textarea>
-          <input type="submit" value="Enviar" class="btn enviar">
-        </form>
+      <!--Validación-->
+      <?php if(!$logged_in):?>
+        <?php print render($content['links']);?>
+      <?php else: ?>
+      <p>Comentarios</p>
+         <nav<?php 
+         $links = render($content['links']['comments']);
+
+         print $links_attributes; ?>><?php print $links; ?>
+          <?php print render($title_suffix); ?>
+         <?php print render($content['comments']); ?>
+       </nav>
+      <?php endif; ?>
       </div>
       <!--/-Comentarios     -->
     </div>
@@ -190,16 +199,9 @@ hide($content['links']);
 </section>
 <!--/-Contenido
 <!--F Contenido-->
-   <?php if ($links = render($content['links'])): ?>
-    <nav<?php print $links_attributes; ?>><?php print $links; ?></nav>
-  <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
-
-  <?php print render($title_suffix); ?>
+ 
 </article>
 
-<span>
 <!--<script type="application/ld+json">
 {
   "@context": "http://schema.org/",

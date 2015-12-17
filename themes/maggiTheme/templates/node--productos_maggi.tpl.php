@@ -120,12 +120,13 @@ hide($content['links']);
     <!--Estrellas y Compartir-->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
       <div class="estrellas">
+        <?php print render($content['field_receta_calificacion']);?>
         <!-- <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span> -->
       </div>
       <p class="extra-tools">
         <div class="botones-redes-wrapper"></div>
         <span class="icon icon-share"></span>
-        <span class="glyphicon glyphicon-heart-empty"></span>
+        <?php print render($content['links']['flag']);?>
       </p>
     </div>
     <!--/-Estrellas y Compartir-->
@@ -155,14 +156,10 @@ hide($content['links']);
       </div>
       <!--/-Datos del producto-->
     </div>
+
   </article>
 </section>
 
 <!--/-Contenido-->
 <!--/-Contenido-->
 <!--F Contenido-->
-   <?php if ($links = render($content['links'])): ?>
-    <nav<?php print $links_attributes; ?>><?php print $links; ?></nav>
-  <?php endif; ?>
-
-  <?php print render($content['comments']); ?>
