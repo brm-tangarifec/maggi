@@ -34,12 +34,6 @@
  * @ingroup themeable
  */
 
-$perfil=toArray($user_profile);
-$fotoPerfil=$perfil['field_imagen_perfil']['#object']['field_imagen_perfil']['und'][0]['uri'];
-
-
-
-
 ?>
 
 

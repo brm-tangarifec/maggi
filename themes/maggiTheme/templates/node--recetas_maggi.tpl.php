@@ -129,6 +129,7 @@ hide($content['links']);
         <?php print render($content['field_receta_calificacion']);?>
         <?php print render($content['links']);?>
         <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+
       <p class="extra-tools">
         <div class="botones-redes-wrapper"></div>
         <span class="icon icon-share"></span>
@@ -198,3 +199,23 @@ hide($content['links']);
 
   <?php print render($title_suffix); ?>
 </article>
+
+<span>
+<!--<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Recipe",
+  "name": "<?php print render($title);?>",
+  "image": "<?php print_r(file_create_url($content['field_receta_imagen_grande']['#object']->field_receta_imagen_grande['und'][0]['uri']));?>",
+  "author": {
+    "@type":"Person",
+    "name":"Maggi"
+  },
+  "description": "<?php print_r($content['field_receta_descripcion']['#object']->field_receta_descripcion['und'][0]['value']);?>",
+  "recipeYield": "<?php print_r($content['field_receta_calorias']['#object']->field_receta_porciones['und'][0]['value']);?> Porciones",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "<?php print_r($content['field_receta_calorias']['#object']->field_receta_calorias['und'][0]['value']);?> cal"
+  }
+}
+</script>-->

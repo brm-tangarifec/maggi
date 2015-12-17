@@ -108,7 +108,12 @@
 <!--FIN Region que imprime el Slider mediante Context-->
 <!--Vista recetas-->
 <div class="container-fluid recetas">
-	<div class="row">
+	
+  <?php if ($page['secondary_content']) : ?>           
+    <?php print render($page['secondary_content']); ?>           
+  <?php endif; ?> 
+  
+  <div class="row">
     <h2 class="titular-bg">
       <span class="icon icon-recetas"></span> Recetas para todos los días
       
