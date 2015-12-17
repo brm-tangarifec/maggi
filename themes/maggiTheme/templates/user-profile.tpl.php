@@ -34,6 +34,8 @@
  * @ingroup themeable
  */
 
+//print_r($user_profile);
+$fotoPerfil=$user_profile['field_nombre_s_user']['#object']->picture->uri;
 ?>
 
 
@@ -52,13 +54,13 @@
    </div>
 
     <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
-    <p class="nombre"> <?php print $user_profile['field_nombres'][0]['#markup']." ".$user_profile['field_apellidos'][0]['#markup']; ?></p>
-    <p><strong>Email</strong> <?php print $user_profile['mail'] ?>
+    <p class="nombre"> <?php print $user_profile['field_nombre_s_user'][0]['#markup']." ".$user_profile['field_apellido_s_user'][0]['#markup']; ?></p>
+    <p><strong>Email</strong> <?php print $user_profile['field_nombre_s_user']['#object']->mail; ?>
     </p>
-    <p><strong>Teléfono </strong><?php print $user_profile['field_telefono'][0]['#markup']; ?></p>
-    <p><strong>Ciudad</strong>  <?php print $perfil['field_ciudades']['#object']['field_ciudades']['und'][0]['taxonomy_term']['name'] ; ?></p>
-    <p><strong>Documento</strong>    <?php print $user_profile['field_tipo_documento'][0]['#markup']; ?> <?php print $user_profile['field_numero_documento'][0]['#markup']; ?> </p>
-    <p><strong>Fecha de nacimiento </strong><?php print $user_profile['field_fecha_nacimiento'][0]['#markup']; ?></p>
+    <p><strong>Teléfono </strong><?php print $user_profile['field_telefono_user'][0]['#markup']; ?></p>
+    <!--<p><strong>Ciudad</strong>  <?php print $perfil['field_ciudades']['#object']['field_ciudades']['und'][0]['taxonomy_term']['name'] ; ?></p-->
+    <p><strong>Documento</strong>    <?php print $user_profile['field_tipo_de_documento_user'][0]['#markup']; ?> <?php print $user_profile['field_numero_de_documento_user'][0]['#markup']; ?> </p>
+    <p><strong>Fecha de nacimiento </strong><?php print $user_profile['field_fecha_de_nacimiento_user'][0]['#markup']; ?></p>
    </div>
  </div>
 

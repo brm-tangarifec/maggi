@@ -1,21 +1,28 @@
+<?php global $base_url;?>
 <header class="container-fluid">
   <!--Wrapper login-->
   <div class="login">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-2">
         <h2>Inicio de sesión</h2>
-        <form method="" class="form-login">
-          <!--Usuario-->
+
+        
+        <?php
+              $block = module_invoke('user', 'block_view', 'login');
+            print render($block['content']);
+         ?>
+        <!-- <form method="" class="form-login">
+          <!--Usuario->
           <div class="form-group">
             <label for="login-usuario">Usuario:</label>
             <input type="text" id="login-usuario" name="login-usuario" class="form-control">
           </div>
-          <!--Contraseña-->
+          <!--Contraseña->
           <div class="form-group">
             <label for="login-password">Contraseña: </label>
             <input type="text" id="login-password" name="login-password" class="form-control">
           </div>
-          <!--Recordarme-->
+          <!--Recordarme->
           <div class="checkbox">
             <label><input type="checkbox"> Recordar mi cuenta</label>
           </div>
@@ -25,7 +32,7 @@
             
             
           </p>
-        </form>
+        </form> -->
         <button type="button" class="btn btn-warning cerrar-login"><span class="glyphicon glyphicon-chevron-up"></span></button>
       </div>
     </div>
@@ -34,7 +41,7 @@
   <!--Registro y Login-->
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-9 col-md-offset-9 col-sm-offset-8 text-center">
-      <p><a href="#">Registrarse</a> / <a href="#" class="btn-login">Iniciar Sesión</a> <span class="icon icon-profile"></span></p>
+      <p><a href="<?php print base_path()?>user/register">Registrarse</a> / <a href="#" class="btn-login">Iniciar Sesión</a> <span class="icon icon-profile"></span></p>
     </div>
   </div>
   <!--/-Registro y Login-->

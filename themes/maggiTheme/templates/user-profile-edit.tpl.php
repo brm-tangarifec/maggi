@@ -35,354 +35,181 @@
  */
 
 /*echo '<pre>';
-print_r($form);
-print render($form['account']['mail']);
+//print_r($form);
+print render($form['account']['pass']);
 echo '</pre>';*/
 ?>
 
 <div class="row">
+
+
+  <h1 class="text-center">Registro</h1>
+ 
   <!--Imagen de perfil-->
   <div class="col-lg-4 col-md-4 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
     
     <?php
-      print render($form['field_imagen_perfil']);
+      print render($form['picture']);
+    ?>
+
+  </div>
+  <!--/-Imagen de perfil-->
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+    
+    <?php
+      print render($form['field_nombre_s_user']);
+    ?>
+
+  </div>
+
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+    <?php
+      print render($form['field_apellido_s_user']);
     ?>
 
   </div>
   <!--/-Imagen de perfil-->
 </div>
-<div class="row">
-    <!--Nombres-->
-  <div class="col-lg-5 col-md-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-    <?php
-      print render($form['field_nombres']);
-    ?>
 
-  </div>
-  <!--/-Nombres-->
-  <!--Apellidos-->
-  <div class="col-lg-5 col-md-5 col-xs-12">
-    <?php
-      print render($form['field_apellidos']);
-    ?>
 
-  </div>
-  <!--/-Apellidos-->
-</div>
 <div class="row">
   <!--Nombre Usuario-->
-  <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
       print render($form['account']['name']);
     ?>
 
   </div>
-  <!--/-Nombre Usuario-->
-</div>
-<div class="row">
-  <!--Tipo Documento-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
-    <?php
-      print render($form['field_tipo_documento']);
-    ?>
-    
-
-  </div>
-  <!--/-Tipo Documento-->
-  <!--Número de documento-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-    <?php
-      print render($form['field_numero_documento']);
-    ?>  
-    
-    
-  </div>
-  <!--/-Número de documento-->
-  <!--Fecha nacimiento-->
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-    
-    <?php
-      print render($form['field_fecha_nacimiento']);
-    ?>
-    
-  </div>
-  <!--/-Fecha nacimiento-->
-</div>
-<div class="row">
-  <!--Email-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
       print render($form['account']['mail']);
+    ?> 
+  </div>
+  <!--/-Nombre Usuario-->
+</div>
+
+<div class="row">
+
+
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+    <?php
+      print render($form['field_tipo_de_documento_user']);
     ?>
 
-
   </div>
-  <!--/-Email-->
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+     <?php
+      print render($form['field_numero_de_documento_user']);
+    ?>  
+    
+
+   </div>
+</div>
+
+<div class="row">
+    <!--Nombres-->
+  
+  <!--/-Nombres-->
+  <!--Apellidos-->
+  
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+
+     <?php
+      print render($form['field_g_nero_user']);
+    ?>
+    
+
+   </div>
+
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+    <?php
+      print render($form['field_fecha_de_nacimiento_user']);
+    ?>
+   </div>
+
+  
+</div>
+
+<div class="row">
+
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-xs-offset-1">
+     <?php
+    print render($form['field_departamento']);
+    ?>
+  </div>
+</div>
+
+<div class="row">
+
   <!--Teléfono-->
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
     <?php
-      print render($form['field_telefono']);
+      print render($form['field_como_te_enteraste_user']);
     ?>
 
   </div>
   <!--/-Teléfono-->
 </div>
 <div class="row">
-  <!--Genero-->
+
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
-      print render($form['field_genero']);
+     /* print render($form['field_como_te_enteraste_user']);*/
     ?>
 
   </div>
-  <!--/-Genero-->
-  <!--Departamento-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-    <?php
-    print render($form['field_ciudades']);
-    ?>
 
-  </div>
-  <!--/-Departamento-->
-  <!--Ciudad-->
-<!--   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
     <?php
-    /*print render($form['field_ciudad']);*/
+      /*print_r($form['account']);*/
+       print render($form['account']['pass']);
     ?>
-           
     
-  </div> -->
+    
+    
+  </div>
+
+</div>
   <!--/-Ciudad-->
-</div>
-<div class="row">
-  <!--Contraseña y confirmar contraseña-->
-  <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
-    <?php
-        /*print render($form['field_confirmar_contrasena']);*/ 
-         print render($form['account']['pass']);
-    ?>
-    
-    
-    
-  </div>
-</div>
+
 <div class="row">
   <!--Deseo Recibir Info-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-       <?php
-      print render($form['field_deseo_recibir_informacion']); 
-      ?>
-    
-  </div>
+
   <!--/-Deseo Recibir Info-->
   <!--Como te enteraste-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
     
     <?php
-    print render($form['field_como_te_enteraste']);
+      print render($form['field_deseo_recibir_informacion']); 
     ?>
     
   </div>
   <!--/-Como te enteraste-->
-</div>
-<div class="row">
   <!--Autorizo uso de datos-->
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
      <?php
-      print render($form['field_aturizacion_datos']); 
+      print render($form['field_ace_y_condi']); 
      ?>
 
   </div>
   <!--/-Autorizo uso de datos-->
+
 </div>
-<!--Preferencias-->
-  <div class="row preferenciasO">
-    <?php
-        print render($form['field_contenido_preferencias']); 
-     ?>
 
-
-  </div>
-
-<div id="selector-preferencias">
-  <!--Inicio selección temas-->
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
-      <div class="selection select-default"><span class="logo icon icon-white icon-check"></span>
-        <div class="content">
-          <p>SELECCIONA LOS TEMAS<br>QUE MÁS TE INTERESAN</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/-Final selección temas-->
-  <!--Inicio selección pilares-->
-  <div class="row">
-    <!-- Selección nutrición-->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <!--Titulo nutrición-->
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 selection select-nutricion"><span class="logo icon icon-pilares icon-nutricion"></span>
-        <div class="content tipoc" data-contenido='nutricion' data-iden='1'>
-          <h2>NUTRICIÓN</h2>
-        </div>
-      </div>
-      <div class="hidden show-nutricion">
-          <div data-box="Nutrientes" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1208">
-        <input type="checkbox" name="linea" id="linea" value="linea"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-alimentos"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Nutrientes Alimenticios</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Alimentos Saludables" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1209">
-        <input type="checkbox" name="preparaciones" id="preparaciones" value="preparaciones"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-preparaciones"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Selección de Alimentos Saludables</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="balanceados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1211">
-        <input type="checkbox" name="familia" id="familia" value="familia"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-menu-balanceado"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Menús balanceados</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-        <!--Familia-->
-      <div data-box="alimentos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1210">
-        <input type="checkbox" name="familia" id="familia" value="familia"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-manipulacion"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Manipulación de alimentos</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      </div>  
-    </div>
-
-    
-   
-    <!--/- Selección nutrición-->
-    
-    <!-- Selección salud-->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <!--Titulo salud-->
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 selection select-salud"><span class="logo icon icon-pilares icon-white icon-salud"></span>
-        <div class="content tipoc" data-contenido='salud' data-iden='2'>
-          <h2>SALUD</h2>
-        </div>
-      </div>
-      <div class="hidden show-salud">
-
-        <!--Adultos mayores-->
-      <div data-box="Personal" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand"  data-iden="1212">
-        <input type="checkbox" name="adultos" id="adultos" value="adultos"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-cuidado-personal"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Cuidado Personal</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Descanso" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1214">
-        <input type="checkbox" name="ejercicio" id="ejercicio" value="ejercicio"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-descanso"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Descanso</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-      <div data-box="Ejercicio" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1213">
-        <input type="checkbox" name="alergias" id="alergias" value="alergias"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-deporte"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Ejercicio</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="enfermedades" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1215">
-        <input type="checkbox" name="alergias" id="alergias" value="alergias"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-line"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Prevención de enfermedades</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      </div>
-    </div>
-    <!--/- Selección salud-->
-    
-    <!-- Selección bienestar-->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <!--Titulo bienestar-->
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 selection select-bienestar"><span class="logo icon icon-pilares icon-white icon-bienestar"></span>
-        <div class="content tipoc" data-contenido='bienestar' data-iden='3'>
-          <h2>BIENESTAR</h2>
-        </div>
-      </div>
-
-     <div class="hidden show-bienestar">
-
-       <div data-box="belleza" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1219">
-        <input type="checkbox" name="belleza" id="belleza" value="belleza"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-belleza"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Belleza</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Celebraciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1220">
-        <input type="checkbox" name="ocio" id="ocio" value="ocio"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-celebracion"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Celebraciones</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Familia" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1217">
-        <input type="checkbox" name="deporte" id="deporte" value="deporte"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-familia"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Familia</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Hijos" data-iden='' class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1216">
-        <input type="checkbox" name="deporte" id="deporte" value="deporte"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-ninos"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Hijos</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-      <div data-box="Vacaciones" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 boton-brand" data-iden="1218"> 
-        <input type="checkbox" name="deporte" id="deporte" value="deporte"><span class="icon icon-check check-active circle-check"></span><span class="icon icon-close check-active-two circle-uncheck"></span><span class="logo icon icon-vacaciones"></span>
-        <div class="content">
-          <h3 class="titulo-selector">Vacaciones</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit.</p> -->
-        </div>
-      </div>
-
-     </div>
-
-    </div>
-    <!--/- Selección bienestar-->
-  </div>
-</div>
-  </div>
   <!--/-Final selección pilares-->
- 
-  </div>
-</div>
 <div class="row">
   <!--Submit-->
-  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
     <?php print drupal_render_children($form); ?>
     
   </div>
