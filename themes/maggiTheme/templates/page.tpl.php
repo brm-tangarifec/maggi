@@ -91,6 +91,13 @@
  * @see adaptivetheme_process_page()
  */
 ?>
+
+<?php
+ if(isset($page['content']['metatags'])){
+ render($page['content']['metatags']);  
+ }
+ 
+?>
 <!--Header-->
   <?php
     $block = module_invoke('BRM_Maggi', 'block_view', 'header');

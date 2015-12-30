@@ -163,3 +163,19 @@ hide($content['links']);
 <!--/-Contenido-->
 <!--/-Contenido-->
 <!--F Contenido-->
+
+
+<!--Rich Snippet-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "<?php print render($title);?>",
+  "image": "<?php print_r(file_create_url($content['field_producto_imagen_grande']['#object']->field_producto_imagen_grande['und'][0]['uri']));?>",
+  "author": {
+    "@type":"Person",
+    "name":"Maggi"
+  },
+}
+</script>
+<!--Fin RS-->
