@@ -188,10 +188,11 @@ hide($content['links']);
          $links = render($content['links']['comments']);
 
          print $links_attributes; ?>><?php print $links; ?>
-          <?php print render($title_suffix); ?>
-         <?php print render($content['comments']); ?>
+          
        </nav>
       <?php endif; ?>
+      <?php print render($title_suffix); ?>
+          <?php print render($content['comments']); ?>
       </div>
       <!--/-Comentarios     -->
     </div>
@@ -202,7 +203,7 @@ hide($content['links']);
  
 </article>
 
-<!--<script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "http://schema.org/",
   "@type": "Recipe",
@@ -219,4 +220,4 @@ hide($content['links']);
     "calories": "<?php print_r($content['field_receta_calorias']['#object']->field_receta_calorias['und'][0]['value']);?> cal"
   }
 }
-</script>-->
+</script>

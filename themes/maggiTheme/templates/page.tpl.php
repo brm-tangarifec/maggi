@@ -90,6 +90,14 @@
  * @see adaptivetheme_preprocess_page()
  * @see adaptivetheme_process_page()
  */
+
+?>
+
+<?php
+ if(isset($page['content']['metatags'])){
+ render($page['content']['metatags']);  
+ }
+ 
 ?>
 <!--Header-->
   <?php
@@ -112,8 +120,14 @@
             <?php if ($content = render($page['content'])): ?>
               <div id="content" class="region">
                 <?php print $content; ?>
+                <?php if ($tabs): ?>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
+                    <?php print render($tabs['#primary'][2]); ?>
+                  </div>
+                <?php endif; ?>
               </div>
             <?php endif; ?>
+             
 
   
   </div>

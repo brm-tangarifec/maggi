@@ -44,16 +44,7 @@ echo '</pre>';*/
 
 
   <h1 class="text-center">Registro</h1>
- 
-  <!--Imagen de perfil-->
-  <div class="col-lg-4 col-md-4 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
-    
-    <?php
-      print render($form['picture']);
-    ?>
 
-  </div>
-  <!--/-Imagen de perfil-->
   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
@@ -92,7 +83,7 @@ echo '</pre>';*/
 <div class="row">
 
 
-<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
       print render($form['field_tipo_de_documento_user']);
     ?>
@@ -107,14 +98,17 @@ echo '</pre>';*/
     
 
    </div>
+
+   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+    <?php
+      print render($form['field_fecha_de_nacimiento_user']);
+    ?>
+   </div>
 </div>
 
 <div class="row">
-    <!--Nombres-->
-  
-  <!--/-Nombres-->
-  <!--Apellidos-->
-  
+
 
    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
@@ -125,49 +119,40 @@ echo '</pre>';*/
 
    </div>
 
-
-   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-
-    <?php
-      print render($form['field_fecha_de_nacimiento_user']);
-    ?>
-   </div>
-
-  
-</div>
-
-<div class="row">
-
-<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-xs-offset-1">
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
      <?php
     print render($form['field_departamento']);
     ?>
   </div>
+
+
+  
 </div>
+
 
 <div class="row">
 
-  <!--Teléfono-->
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     <?php
       print render($form['field_como_te_enteraste_user']);
     ?>
 
   </div>
-  <!--/-Teléfono-->
-</div>
-<div class="row">
 
-  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-    
+
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
     <?php
-     /* print render($form['field_como_te_enteraste_user']);*/
+      print render($form['field_telefono_user']);
     ?>
 
   </div>
 
 
-   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+
+</div>
+<div class="row">
+
+   <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 
     <?php
       /*print_r($form['account']);*/
@@ -187,7 +172,7 @@ echo '</pre>';*/
 
   <!--/-Deseo Recibir Info-->
   <!--Como te enteraste-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
     
     <?php
       print render($form['field_deseo_recibir_informacion']); 
@@ -196,7 +181,7 @@ echo '</pre>';*/
   </div>
   <!--/-Como te enteraste-->
   <!--Autorizo uso de datos-->
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
      <?php
       print render($form['field_ace_y_condi']); 
      ?>

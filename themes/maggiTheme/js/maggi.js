@@ -20,6 +20,7 @@ $(document).ready(function(){
 	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').empty();
 });
 
+var port="/fbappCasaBienestar";
 /* FIN Corazon Favoritos */
 
 
@@ -58,14 +59,14 @@ jQuery(document).ready(function(){
 	var port = "/fbappCasaBienestar",
 		laBajada=window.location.hash;
 	/* JS Label filtros expuestos*/
-	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
+	//console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
 	$("div#edit-field-receta-categoria-para-comp-tid-wrapper label").css("display","none");
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
 	$("div#edit-field-receta-categoria-tid-wrapper label").css("display","none");
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option:first").text();
 	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option:first").text();
-	console.log(valueParaComp);
+	//console.log(valueParaComp);
 	if(valueParaComp == "- Any -"){
 		$("select#edit-field-receta-categoria-para-comp-tid option:first").text(paraComp);
 	}
@@ -474,4 +475,115 @@ $(document).on("ready", function () {
 	};
 
 	
+});
+
+
+/*Validación de formularios*/
+
+jQuery(document).ready(function(){
+
+var currentURL = window.location.href;
+	 	var hs = currentURL.slice(-8);
+	 	console.log(hs);
+if(jQuery('form').length>0){
+	jQuery('form').each(function(){
+	    jQuery(this).validate({
+	
+	    	errorClass: "text-danger",
+		errorPlacement: function(error, element) {
+	    	error.insertAfter(element);
+	    	element.focus();
+			},
+				rules: {
+					name: {
+						required: true,
+					},
+	
+					pass: {
+						required: true,
+					},
+					mail : {
+						required: true,
+						email: true
+					}
+	
+				},
+				messages: {
+					name: {
+						required: 'El campo no debe estar vacío',
+					},
+					pass: {
+						required: 'El campo no debe estar vacío',
+					},
+					mail : {
+						required: 'El campo no debe estar vacío',
+						email: 'Ingrese un formato de e-mail válido'
+						
+					}
+				}
+	
+	    });
+	
+	   
+	});
+}
+ jQuery("#edit-custom-search-blocks-form-1--2").rules("add", {
+         required:true,
+         messages: {
+                required: "Ingrese un valor para su búsqueda"
+         }
+ });
+
+
+
+if(hs=='register'){
+
+/*se agrega un metodo de validacion llamdo string; se encarga de
+	* validar que las cadenas de caracteres ingresadas no contengan
+	* caracteres especiales.
+	*/
+	jQuery.validator.addMethod("string", function(value, element)
+    {
+        return this.optional(element) || /^[a-z" "ñÑáéíóúÁÉÍÓÚ,.;]+$/i.test(value);
+    });
+ jQuery("#edit-field-nombre-s-user-und-0-value").rules("add", {
+         required:true,
+         string: true,
+         messages: {
+                required: "El campo no debe estar vacio",
+                string: "El nombre no debe contener caracteres numéricos o especiales",
+         }
+ });
+ jQuery("#edit-field-apellido-s-user-und-0-value").rules("add", {
+         required:true,
+         string: true,
+         messages: {
+                required: "El campo no debe estar vacio",
+                string: "El nombre no debe contener caracteres numéricos o especiales",
+         }
+ });
+
+}
+
+/*Banea palabras*/
+
+$.getJSON( dominio+port+'/lalistabanea', function( data ) {
+  
+  baneoesto = data;
+		
+}); 
+	jQuery('.password-field').on('blur',function(){
+		
+		var pass=jQuery('input[name="pass[pass1]"]').val();
+		
+		if(jQuery.inArray(pass,baneoesto) !== -1) {
+			
+		   	jQuery('input[name="pass[pass1]"]').val('');
+		    jQuery('.form-type-password').append('<label class="error">La contraseña no es válida</label>');
+
+		}
+
+	}); 
+
+
 });
