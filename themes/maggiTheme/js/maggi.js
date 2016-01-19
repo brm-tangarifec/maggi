@@ -350,7 +350,7 @@ jQuery(document).ready(function(){
 
 		categoriaProd.addClass('productos').html("");
 
-		categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'+
+		categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto activo"><div class="content"><a href="'+
 			sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
 			+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
 			+bases+'" class="producto-categoria">Bases</a><img src="'
