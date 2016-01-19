@@ -23,7 +23,15 @@
        <p>
         <?php if($logged_in):?>
           
-           <a href="<?php print base_path()?>user/">Ver Perfil</a> /  <a href="<?php print base_path()?>user/logout">Cerrar sesión</a><span class="icon icon-profile"></span>
+           <a href="<?php print base_path()?>user/">Ver Perfil</a> /  <a href="<?php print base_path()?>user/logout">Cerrar Sesión</a> <span class="icon icon-profile"></span> |
+            <span class="text-center header-social social-links">
+        <a href="https://www.facebook.com/MaggiElSaborAColombia/" rel="nofollow" target="_blank" class="icon icon-fb"></a>
+        <a href="https://www.youtube.com/user/MAGGICOLOMBIA" rel="nofollow" target="_blank" class="icon icon-yt"></a>
+        
+        
+        
+      </span>
+
         <?php else: ?>
           <a href="<?php print base_path()?>user/register">Registrarse</a> / <a href="#" class="btn-login">Iniciar Sesión</a> <span class="icon icon-profile"></span> |
 
