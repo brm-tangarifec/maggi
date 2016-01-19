@@ -35,25 +35,13 @@
  */
 
 //print_r($user_profile);
-$fotoPerfil=$user_profile['field_nombre_s_user']['#object']->picture->uri;
+/*$fotoPerfil=$user_profile['field_nombre_s_user']['#object']->picture->uri;*/
 ?>
 
 
  <div class="row">
-  
 
-    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
-
-
-      <figure class="img-perfil img-circle center-block">
-        
-          <img src="<?php print file_create_url($fotoPerfil)?>" >
-        
-      </figure>
-
-   </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4">
     <p class="nombre"> <?php print $user_profile['field_nombre_s_user'][0]['#markup']." ".$user_profile['field_apellido_s_user'][0]['#markup']; ?></p>
     <p><strong>Email</strong> <?php print $user_profile['field_nombre_s_user']['#object']->mail; ?>
     </p>
@@ -63,9 +51,6 @@ $fotoPerfil=$user_profile['field_nombre_s_user']['#object']->picture->uri;
     <p><strong>Fecha de nacimiento </strong><?php print $user_profile['field_fecha_de_nacimiento_user'][0]['#markup']; ?></p>
    </div>
  </div>
-
-
-
  
         
           

@@ -108,5 +108,3 @@
     print render($block['content']);
   ?>
 </div>
-
-  
