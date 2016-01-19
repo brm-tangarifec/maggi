@@ -20,7 +20,6 @@ $(document).ready(function(){
 	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').empty();
 });
 
-var port="/fbappCasaBienestar";
 /* FIN Corazon Favoritos */
 
 
@@ -59,14 +58,14 @@ jQuery(document).ready(function(){
 	var port = "/fbappCasaBienestar",
 		laBajada=window.location.hash;
 	/* JS Label filtros expuestos*/
-	//console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
+	console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
 	$("div#edit-field-receta-categoria-para-comp-tid-wrapper label").css("display","none");
 	var paraAllDay = $("div#edit-field-receta-categoria-tid-wrapper label").text();
 	$("div#edit-field-receta-categoria-tid-wrapper label").css("display","none");
 	var valueParaComp = $("select#edit-field-receta-categoria-para-comp-tid option:first").text();
 	var valueParaAllDay = $("select#edit-field-receta-categoria-tid option:first").text();
-	//console.log(valueParaComp);
+	console.log(valueParaComp);
 	if(valueParaComp == "- Any -"){
 		$("select#edit-field-receta-categoria-para-comp-tid option:first").text(paraComp);
 	}
@@ -261,10 +260,17 @@ jQuery(document).ready(function(){
 		caldos = $("#quicktabs-tab-prodcutos_y_promociones-2").attr('href'),
 		sazonadores = $("#quicktabs-tab-prodcutos_y_promociones-3").attr('href'),
 		categoriaProd = $(".item-list-q"),
+		productosSopas = $('#quicktabs-tabpage-prodcutos_y_promociones-0' ),
+		productosBases = $('#quicktabs-tabpage-prodcutos_y_promociones-1' ),
+		productosCaldos = $('#quicktabs-tabpage-prodcutos_y_promociones-2' ),
+		productosSazonadores = $('#quicktabs-tabpage-prodcutos_y_promociones-3' ),
 		urlFiltro = window.location.pathname+window.location.search+window.location.hash;
+
+
 		
 	if ( url == port+"/productos-promociones" || url == port+"/productos-promociones/"){
 
+		/*Pintamos contenedores*/
 			categoriaProd.addClass('productos').html("");
 
 			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'+
@@ -278,6 +284,7 @@ jQuery(document).ready(function(){
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
 	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=0#qt-prodcutos_y_promociones" ){
+		/*Sopas y cremas active*/
 
 			categoriaProd.addClass('productos').html("");
 
@@ -293,6 +300,7 @@ jQuery(document).ready(function(){
 
 	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=1#qt-prodcutos_y_promociones" ){
 
+		/*Bases active*/
 			categoriaProd.addClass('productos').html("");
 
 			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
@@ -307,6 +315,7 @@ jQuery(document).ready(function(){
 
 	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=2#qt-prodcutos_y_promociones" ){
 
+		/*Caldos active*/
 			categoriaProd.addClass('productos').html("");
 
 			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
@@ -321,6 +330,7 @@ jQuery(document).ready(function(){
 
 	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=3#qt-prodcutos_y_promociones" ){
 
+		/*Sazonadores active*/
 			categoriaProd.addClass('productos').html("");
 
 			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
@@ -333,7 +343,75 @@ jQuery(document).ready(function(){
 				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
 				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
 
-	};
+	}
+
+	/*Validamos ancho de ventana para pintar productos sopas*/
+	if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=0#qt-prodcutos_y_promociones" && screenWidth  < 768 ){
+
+		categoriaProd.addClass('productos').html("");
+
+		categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'+
+			sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
+			+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+			+bases+'" class="producto-categoria">Bases</a><img src="'
+			+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+			+caldos+'" class="producto-categoria">Caldos</a><img src="'
+			+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+			+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
+			+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
+
+		productosSopas.insertAfter('.activo');
+
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=1#qt-prodcutos_y_promociones" && screenWidth  < 768  ){
+
+		/*Bases active*/
+			categoriaProd.addClass('productos').html("");
+
+			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
+				sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto activo"><div class="content"><a href="'
+				+bases+'" class="producto-categoria">Bases</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+caldos+'" class="producto-categoria">Caldos</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
+		productosBases.insertAfter('.activo');
+
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=2#qt-prodcutos_y_promociones" && screenWidth  < 768  ){
+
+		/*Caldos active*/
+			categoriaProd.addClass('productos').html("");
+
+			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
+				sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'
+				+bases+'" class="producto-categoria">Bases</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto activo"><div class="content"><a href="'
+				+caldos+'" class="producto-categoria">Caldos</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto"><div class="content"><a href="'
+				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
+		productosCaldos.insertAfter('.activo');
+
+	}if ( urlFiltro == port+"/productos-promociones?qt-prodcutos_y_promociones=3#qt-prodcutos_y_promociones" && screenWidth  < 768  ){
+
+		/*Sazonadores active*/
+			categoriaProd.addClass('productos').html("");
+
+			categoriaProd.html('<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'+
+				sopas+'" class="producto-categoria">Sopas y Cremas</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/cremas-sopas.jpg" alt="Sopas y Cremas" title="Sopas y Cremas"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'
+				+bases+'" class="producto-categoria">Bases</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/bases.jpg" alt="Bases" title="Bases"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto "><div class="content"><a href="'
+				+caldos+'" class="producto-categoria">Caldos</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/caldos.jpg" alt="Caldos" title="Caldos"></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 producto activo"><div class="content"><a href="'
+				+sazonadores+'" class="producto-categoria">Sazonadores</a><img src="'
+				+dominio+port+'/sites/all/themes/maggiTheme/files/images/productos/sazonadores.jpg" alt="Sazonadores" title="Sazonadores"></div></div>');
+
+		productosSazonadores.insertAfter('.activo');
+	}
+
 
 
 
@@ -475,115 +553,4 @@ $(document).on("ready", function () {
 	};
 
 	
-});
-
-
-/*Validación de formularios*/
-
-jQuery(document).ready(function(){
-
-var currentURL = window.location.href;
-	 	var hs = currentURL.slice(-8);
-	 	console.log(hs);
-if(jQuery('form').length>0){
-	jQuery('form').each(function(){
-	    jQuery(this).validate({
-	
-	    	errorClass: "text-danger",
-		errorPlacement: function(error, element) {
-	    	error.insertAfter(element);
-	    	element.focus();
-			},
-				rules: {
-					name: {
-						required: true,
-					},
-	
-					pass: {
-						required: true,
-					},
-					mail : {
-						required: true,
-						email: true
-					}
-	
-				},
-				messages: {
-					name: {
-						required: 'El campo no debe estar vacío',
-					},
-					pass: {
-						required: 'El campo no debe estar vacío',
-					},
-					mail : {
-						required: 'El campo no debe estar vacío',
-						email: 'Ingrese un formato de e-mail válido'
-						
-					}
-				}
-	
-	    });
-	
-	   
-	});
-}
- jQuery("#edit-custom-search-blocks-form-1--2").rules("add", {
-         required:true,
-         messages: {
-                required: "Ingrese un valor para su búsqueda"
-         }
- });
-
-
-
-if(hs=='register'){
-
-/*se agrega un metodo de validacion llamdo string; se encarga de
-	* validar que las cadenas de caracteres ingresadas no contengan
-	* caracteres especiales.
-	*/
-	jQuery.validator.addMethod("string", function(value, element)
-    {
-        return this.optional(element) || /^[a-z" "ñÑáéíóúÁÉÍÓÚ,.;]+$/i.test(value);
-    });
- jQuery("#edit-field-nombre-s-user-und-0-value").rules("add", {
-         required:true,
-         string: true,
-         messages: {
-                required: "El campo no debe estar vacio",
-                string: "El nombre no debe contener caracteres numéricos o especiales",
-         }
- });
- jQuery("#edit-field-apellido-s-user-und-0-value").rules("add", {
-         required:true,
-         string: true,
-         messages: {
-                required: "El campo no debe estar vacio",
-                string: "El nombre no debe contener caracteres numéricos o especiales",
-         }
- });
-
-}
-
-/*Banea palabras*/
-
-$.getJSON( dominio+port+'/lalistabanea', function( data ) {
-  
-  baneoesto = data;
-		
-}); 
-	jQuery('.password-field').on('blur',function(){
-		
-		var pass=jQuery('input[name="pass[pass1]"]').val();
-		
-		if(jQuery.inArray(pass,baneoesto) !== -1) {
-			
-		   	jQuery('input[name="pass[pass1]"]').val('');
-		    jQuery('.form-type-password').append('<label class="error">La contraseña no es válida</label>');
-
-		}
-
-	}); 
-
-
 });
