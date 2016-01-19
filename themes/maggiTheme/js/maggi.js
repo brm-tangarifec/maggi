@@ -261,6 +261,10 @@ jQuery(document).ready(function(){
 		caldos = $("#quicktabs-tab-prodcutos_y_promociones-2").attr('href'),
 		sazonadores = $("#quicktabs-tab-prodcutos_y_promociones-3").attr('href'),
 		categoriaProd = $(".item-list-q"),
+		productosSopas = $('#quicktabs-tabpage-prodcutos_y_promociones-0' ),
+		productosBases = $('#quicktabs-tabpage-prodcutos_y_promociones-1' ),
+		productosCaldos = $('#quicktabs-tabpage-prodcutos_y_promociones-2' ),
+		productosSazonadores = $('#quicktabs-tabpage-prodcutos_y_promociones-3' ),
 		urlFiltro = window.location.pathname+window.location.search+window.location.hash;
 		
 	if ( url == port+"/productos-promociones" || url == port+"/productos-promociones/"){
