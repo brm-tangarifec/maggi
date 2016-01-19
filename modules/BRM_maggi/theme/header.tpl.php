@@ -19,7 +19,7 @@
   <!--/-Wrapper login-->
   <!--Registro y Login-->
   <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-offset-9 col-md-offset-9 col-sm-offset-8 text-center">
+    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 col-lg-offset-8 col-md-offset-8 col-sm-offset-7 text-center">
        <p>
         <?php if($logged_in):?>
           
