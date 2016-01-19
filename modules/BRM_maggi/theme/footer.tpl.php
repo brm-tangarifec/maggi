@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
       <p class="text-center">
-        2015 MAGGI® Derechos Reservados / <a href="#">Política de Privacidad</a> | <a href="#">Aviso de Privacidad</a> | <a href="#">Política de Datos Personales </a>
+        2016 MAGGI® Derechos Reservados / <a href="#">Política de Privacidad</a> | <a href="#">Aviso de Privacidad</a> | <a href="#">Política de Datos Personales </a>
         
       </p>
       <p class="text-center">
