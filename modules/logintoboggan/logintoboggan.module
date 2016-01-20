@@ -1192,7 +1192,8 @@ function theme_lt_username_description($variables) {
   switch ($variables['form_id']) {
     case 'user_login':
       // The username field's description when shown on the /user/login page.
-      return t('You may login with either your assigned username or your e-mail address.');
+      //return t('You may login with either your assigned username or your e-mail address.');
+      return t('Inicia sesión con tu nombre de usuario o e-mail');
       break;
     case 'user_login_block':
       return '';
@@ -1217,7 +1218,8 @@ function theme_lt_password_description($variables) {
   switch ($variables['form_id']) {
     case 'user_login':
       // The password field's description on the /user/login page.
-      return t('The password field is case sensitive.');
+      //return t('The password field is case sensitive.');
+      return t('La contraseña diferencia entre mayusculas y minusculas');
       break;
 
     case 'user_login_block':
