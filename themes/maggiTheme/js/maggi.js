@@ -222,7 +222,7 @@ jQuery(document).ready(function(){
 
 
 		var receta = $(".receta-dia");
-		console.log($(document).find(receta));
+		//console.log($(document).find(receta));
 
 		$(".receta-dia").on('click', function() {
 
@@ -413,9 +413,13 @@ jQuery(document).ready(function(){
 		jQuery('div').removeClass('clearfix');	
 	}
 	/*Fin función*/
-	
 
+	/*Función para agregar type="text/html" a videos para youtube en safari*/
 
+	if(jQuery('.youtube-field-player').length>0){
+		
+		jQuery('.youtube-field-player').attr('type',"text/html");
+	}
 
 
 });
@@ -474,7 +478,7 @@ $(document).on("ready", function () {
 			//Click sobre los botones de redes sociales
 		  	
 			//count++;
-			console.log(count);
+			//console.log(count);
 			return false;
 
 			}if( count == 2 ){
@@ -514,7 +518,7 @@ $(document).on("ready", function () {
 				});
 
 				count = 1;
-				console.log(count);
+				//console.log(count);
 				return false;
 
 			}else{
@@ -554,7 +558,7 @@ jQuery(document).ready(function(){
 
 var currentURL = window.location.href;
 	 	var hs = currentURL.slice(-8);
-	 	console.log(hs);
+	 	//console.log(hs);
 if(jQuery('form').length>0){
 	jQuery('form').each(function(){
 	    jQuery(this).validate({

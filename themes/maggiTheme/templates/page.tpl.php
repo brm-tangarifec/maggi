@@ -102,6 +102,7 @@
 <!--Header-->
   <?php
     $block = module_invoke('BRM_Maggi', 'block_view', 'header');
+    if ($show_messages) { print $messages; }; 
     print render($block['content']);
     ?>
 
