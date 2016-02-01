@@ -1219,7 +1219,7 @@ function theme_lt_password_description($variables) {
     case 'user_login':
       // The password field's description on the /user/login page.
       //return t('The password field is case sensitive.');
-      return t('La contraseña diferencia entre mayusculas y minusculas');
+      return t('La contraseña diferencia entre mayúsculas y minúsculas');
       break;
 
     case 'user_login_block':

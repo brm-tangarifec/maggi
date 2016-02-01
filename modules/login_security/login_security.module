@@ -106,6 +106,10 @@ function login_security_form_alter(&$form, &$form_state, $form_id) {
  * message before it gets updated with the current login instance.
  */
 function login_security_set_login_timestamp($form, &$form_state) {
+  if(strpos($form_state['values']['name'],'@')){
+     $aux = search_mail_by_name($form_state['values']['name']);
+     $form_state['values']['name']=$aux['name'];
+  }
   $account = db_select('users', 'u')
     ->fields('u', array('login', 'access'))
     ->condition('name', $form_state['values']['name'])
@@ -348,6 +352,19 @@ function _login_security_add_event($name, $ip) {
   $event->name = $name;
   $event->timestamp = REQUEST_TIME;
   drupal_write_record('login_security_track', $event);
+}
+
+
+/*Busca nombre de usuario por email*/
+function search_mail_by_name($mmail){
+
+ $query = db_select('users', 'usu');
+ $query->fields('usu',array('name'))
+   ->condition('mail', $mmail,'=');
+   $result = $query->execute();
+   while($record = $result->fetchAssoc()) {
+       return $record;
+   }
 }
 
 /**
