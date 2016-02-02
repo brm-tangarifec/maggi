@@ -697,3 +697,59 @@ $.getJSON( dominio+port+'/lalistabanea', function( data ) {
 
 
 });
+
+//funcion enviar por lista de correo//
+var ingredientes = $('.field-collection-container  .field-name-field-receta-ingredientes');
+
+
+var listaIngr = [];
+
+
+ function armarreglo () {
+ 	
+ 	$(ingredientes).each(function() {
+
+ 		var adentro = $(this).text();
+
+ 		listaIngr.push( adentro);
+
+ 		
+ 	});
+
+ };
+
+armarreglo();
+
+var tituloReceta = $('h1').text();
+
+var enviarLista = listaIngr.toString().replace(/,/g,'%0D%0A');
+
+// console.log(perra);
+
+// $('.comment_forbidden').html( '<ul><li>'+ perra +'</ul>');
+
+var mensaje = 'Para preparar ' +  tituloReceta + ' debes comprar los siguientes ingredientes%0D%0A' + enviarLista; 
+
+
+
+ var sendGmail = function(opts){
+		   			 var recipient = '',
+    					 subject   = 'Lista de ingredientes para '+tituloReceta+ 'de MAGGI' ,
+     					message  = mensaje;
+
+
+
+						gmail= 'https://mail.google.com/mail/?view=cm&fs=1'+
+               			 '&to=' + recipient +
+               			 '&su=' + subject +
+                			'&body=' + message + 
+                			'&ui=1';
+};
+
+
+$('.enviar').on('click', function(){ 
+
+	sendGmail();
+	window.open(gmail,'toolbar=0,resizable=1,status=0,width=640,height=528');
+
+} );
