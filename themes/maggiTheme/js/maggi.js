@@ -56,7 +56,11 @@ $(document).ready(function(){
 	$('ul.links li.flag-bookmarks .flag-bookmarks a.flag-action').empty();
 });
 
-var port="/fbappCasaBienestar";
+var url = window.location.pathname,
+	screenWidth = $(window).width(),
+	dominio= window.location.protocol+'//'+window.location.hostname,
+	port = "/fbappCasaBienestar",
+	oli;
 /* FIN Corazon Favoritos */
 
 
@@ -81,19 +85,12 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 
 
-
-var url = window.location.pathname,
-	screenWidth = $(window).width(),
-	dominio= window.location.protocol+'//'+window.location.hostname;
-
-
 /*Funciones y animaciones del sitio web*/
 jQuery(document).ready(function(){
 
 
 /*Variable para dar el path del stiio*/
-	var port = "/fbappCasaBienestar",
-		laBajada=window.location.hash;
+	var laBajada=window.location.hash;
 	/* JS Label filtros expuestos*/
 	//console.log($("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text());
 	var paraComp = $("div#edit-field-receta-categoria-para-comp-tid-wrapper label").text();
@@ -464,7 +461,9 @@ jQuery(document).ready(function(){
 /*Funciones share*/
 $(document).on("ready", function () {
 
-	var btnShare = $(".block-content .icon-share"),
+		/*Funcion para compartir en facebook*/
+
+	var btnShare = $(".icon-share"),
 		count = 0;
 
 		btnShare.on("click", function () {
@@ -489,6 +488,7 @@ $(document).on("ready", function () {
 
 					//Funcion compartir facebook
 					if(data=='fb'){
+						//console.log(oli);
 						Share();
 						$('.botones-redes-wrapper').hide('fade');
 						$('.botones-redes-wrapper').html("");
@@ -531,6 +531,7 @@ $(document).on("ready", function () {
 
 					//Funcion compartir facebook
 					if(data=='fb'){
+						//console.log(oli);
 						Share();
 						$('.botones-redes-wrapper').hide('fade');
 						$('.botones-redes-wrapper').html("");
@@ -571,21 +572,27 @@ $(document).on("ready", function () {
 
 
 
+	//var oli;
+	
 		
-	/*Funcion para compartir en facebook*/
-	var oli;
-	function Share(url) {
-	  FB.ui({
-	  method: 'share_open_graph',
-	  action_type: 'og:share',
-	  action_properties: JSON.stringify({
-	      object: oli,
-	  })
-	}, function(response){});
-	};
+
+		
+
 
 	
 });
+
+/*Funcion Share para fb*/
+		function Share(url) {
+			//console.log(url+oli);
+			  FB.ui({
+			  method: 'share_open_graph',
+			  action_type: 'og:share',
+			  action_properties: JSON.stringify({
+			      object: url,
+			  })
+			}, function(response){});
+		};
 
 
 /*Validación de formularios*/
@@ -695,7 +702,31 @@ $.getJSON( dominio+port+'/lalistabanea', function( data ) {
 
 	}); 
 
+	/*Compartir internas*/
+	var countShare=0;
+	jQuery('#compartirN').on('click',function(){
+		countShare++;
+		console.log(countShare);
+		if(countShare==1){
+			$('.botones-redes-wrapper').show('fade').share({
+        networks: ['facebook','googleplus','twitter'],
+    	});
+			countShare++;
+			console.log(countShare);
+		}else{
+			countShare=2;
+		}
+		console.log(countShare);
 
+		jQuery(".pop").on("click", function () {
+			countShare =0;
+			$('.botones-redes-wrapper').hide('fade');
+			$('.botones-redes-wrapper').html("");
+		});
+
+	});
+
+	/*Fin compartir*/
 });
 
 //funcion enviar por lista de correo//
@@ -747,9 +778,9 @@ var mensaje = 'Para preparar ' +  tituloReceta + ' debes comprar los siguientes 
 };
 
 
-$('.enviar').on('click', function(){ 
+$('.enviar').on('click', function(){
 
 	sendGmail();
 	window.open(gmail,'toolbar=0,resizable=1,status=0,width=640,height=528');
 
-} );
+});

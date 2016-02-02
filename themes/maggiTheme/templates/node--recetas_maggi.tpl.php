@@ -132,7 +132,7 @@ hide($content['links']);
 
       <p class="extra-tools">
         <div class="botones-redes-wrapper"></div>
-        <span class="icon icon-share"></span>
+        <span class="icon icon-share" id="compartirN"></span>
         <?php print render($content['links']['flag']);?>
       </p>
     </div>
